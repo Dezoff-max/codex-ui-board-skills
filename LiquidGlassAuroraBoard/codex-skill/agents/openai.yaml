@@ -1,0 +1,4 @@
+interface:
+  display_name: "Liquid Glass Aurora Board"
+  short_description: "Dual-theme liquid glass UI board"
+  default_prompt: "Use $liquid-glass-aurora-board to create or restyle this interface with frosted liquid glass panels, aurora glow, translucent controls, and a premium light-plus-dark material system."

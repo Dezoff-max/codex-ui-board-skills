@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dual Theme Spec Board"
+  short_description: "Light and dark system UI board"
+  default_prompt: "Use $dual-theme-spec-board to create or restyle this product interface with a complete light and dark design-system board."

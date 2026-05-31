@@ -1,0 +1,4 @@
+interface:
+  display_name: "Soft Neumorphic Dual Theme Board"
+  short_description: "Soft-neumorphic board for light and dark UI"
+  default_prompt: "Use $soft-neumorphic-dual-theme-board to create or restyle this interface with a dual-theme soft-neumorphic design system."

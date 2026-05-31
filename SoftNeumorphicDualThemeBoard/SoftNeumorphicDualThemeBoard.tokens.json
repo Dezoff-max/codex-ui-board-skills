@@ -1,0 +1,107 @@
+{
+  "name": "SoftNeumorphicDualThemeBoard",
+  "version": "1.0.0",
+  "semantic": {
+    "colors": [
+      "bg",
+      "surface",
+      "surfaceAlt",
+      "surfaceInset",
+      "text",
+      "textMuted",
+      "line",
+      "accent",
+      "accentLight",
+      "accentMuted",
+      "success",
+      "warning",
+      "danger"
+    ],
+    "radii": [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+      "pill"
+    ],
+    "shadows": [
+      "raised",
+      "raisedSoft",
+      "inset",
+      "pressed",
+      "card"
+    ]
+  },
+  "themes": {
+    "light": {
+      "colors": {
+        "bg": "#e8ecf1",
+        "surface": "#e8ecf1",
+        "surfaceAlt": "#eef2f7",
+        "surfaceInset": "#dde3ea",
+        "text": "#2d3142",
+        "textMuted": "#8b8fa5",
+        "line": "rgba(197, 201, 206, 0.45)",
+        "accent": "#6b7fd7",
+        "accentLight": "#818cf8",
+        "accentMuted": "rgba(107, 127, 215, 0.15)",
+        "success": "#26de81",
+        "warning": "#ffd93d",
+        "danger": "#ff6b6b"
+      },
+      "radii": {
+        "sm": "14px",
+        "md": "18px",
+        "lg": "22px",
+        "xl": "28px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "raised": "8px 8px 16px #c5c9ce, -8px -8px 16px #ffffff",
+        "raisedSoft": "6px 6px 12px #c5c9ce, -6px -6px 12px #ffffff",
+        "inset": "inset 5px 5px 10px #c5c9ce, inset -5px -5px 10px #ffffff",
+        "pressed": "inset 6px 6px 12px #c5c9ce, inset -6px -6px 12px #ffffff",
+        "card": "10px 10px 20px #c5c9ce, -10px -10px 20px #ffffff"
+      }
+    },
+    "dark": {
+      "colors": {
+        "bg": "#1e232b",
+        "surface": "#252b34",
+        "surfaceAlt": "#2c3440",
+        "surfaceInset": "#1a1f27",
+        "text": "#eef3fb",
+        "textMuted": "#97a2b6",
+        "line": "rgba(133, 148, 170, 0.16)",
+        "accent": "#7d90ff",
+        "accentLight": "#9dacf9",
+        "accentMuted": "rgba(125, 144, 255, 0.18)",
+        "success": "#4ade80",
+        "warning": "#ffd166",
+        "danger": "#ff7b7b"
+      },
+      "radii": {
+        "sm": "14px",
+        "md": "18px",
+        "lg": "22px",
+        "xl": "28px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "raised": "8px 8px 18px #151920, -8px -8px 18px #313947",
+        "raisedSoft": "6px 6px 12px #171b22, -6px -6px 12px #2f3744",
+        "inset": "inset 5px 5px 10px #151920, inset -5px -5px 10px #313947",
+        "pressed": "inset 6px 6px 12px #13171d, inset -6px -6px 12px #333c4a",
+        "card": "12px 12px 24px #14181f, -12px -12px 24px #303846"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": "\"SF Pro Text\", \"Avenir Next\", Inter, \"Segoe UI\", system-ui, sans-serif",
+    "bodySize": "14px",
+    "lineHeight": 1.45,
+    "normalWeight": 400,
+    "mediumWeight": 500,
+    "strongWeight": 600
+  }
+}

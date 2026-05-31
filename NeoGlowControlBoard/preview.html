@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoGlowControlBoard Preview</title>
+    <link rel="stylesheet" href="./NeoGlowControlBoard.css" />
+  </head>
+  <body class="ng-theme" data-theme="light">
+    <main class="ng-shell">
+      <section class="ng-toolbar">
+        <div>
+          <p class="ng-subtle">NeoGlowControlBoard UI Kit + Codex Skill</p>
+          <h1>Luminous control-board system in two themes</h1>
+        </div>
+        <div class="ng-toggle" aria-label="Theme toggle">
+          <button type="button" data-theme-target="light" class="is-active">Light</button>
+          <button type="button" data-theme-target="dark">Dark</button>
+        </div>
+      </section>
+
+      <section class="ng-board">
+        <div class="ng-row">
+          <aside class="ng-rail">
+            <div class="ng-icon-column">
+              <button class="ng-icon-rail-button">⌂</button>
+              <button class="ng-icon-rail-button">⇄</button>
+              <button class="ng-icon-rail-button">＋</button>
+              <button class="ng-icon-rail-button">○</button>
+              <button class="ng-icon-rail-button">▣</button>
+              <button class="ng-icon-rail-button">5</button>
+              <button class="ng-icon-rail-button">⌖</button>
+              <button class="ng-icon-rail-button">👤</button>
+              <button class="ng-icon-rail-button">◉</button>
+              <button class="ng-icon-rail-button">⚙</button>
+              <button class="ng-icon-rail-button is-accent">4K</button>
+            </div>
+          </aside>
+
+          <section class="ng-center">
+            <div class="ng-control-stack">
+              <article class="ng-card ng-height-card">
+                <div class="ng-card-title">Cards</div>
+                <div class="ng-card-meta">Heights</div>
+                <div class="ng-height-track">
+                  <div class="ng-height-knob"></div>
+                </div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Button</h3>
+                  <p>Glowing action states and dense control chips.</p>
+                </div>
+                <div class="ng-button-row">
+                  <button class="ng-button is-glow">Default/Hover</button>
+                  <button class="ng-button is-glow">Loading State</button>
+                </div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Input Density</h3>
+                  <p>Token-driven select and dense form surface.</p>
+                </div>
+                <div class="ng-select">Input perimeter ▾</div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Toggle Input</h3>
+                  <p>Persistent glow ring and strong active thumb.</p>
+                </div>
+                <div class="ng-input-ring">
+                  <div class="ng-toggle-track ng-toggle-wrap is-glow">
+                    <div class="ng-toggle-fill"></div>
+                    <div class="ng-toggle-knob"></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Select + Slider</h3>
+                  <p>Compact binary chip plus luminous slider rail.</p>
+                </div>
+                <div class="ng-inline-controls">
+                  <button class="ng-chip is-glow">On/Off</button>
+                  <div class="ng-slider-wrap" style="min-width: 180px;">
+                    <div class="ng-slider-track">
+                      <div class="ng-slider-fill"></div>
+                      <div class="ng-progress-knob"></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Step indicator</h3>
+                  <p>Tabs, slider chip and small progress head.</p>
+                </div>
+                <div class="ng-stepper">
+                  <span>Toast notification</span>
+                  <div class="ng-inline-controls">
+                    <span>Slider</span>
+                    <div class="ng-stepper-bullet"></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ng-module">
+                <div>
+                  <h3>Modal</h3>
+                  <p>Quiet content well with dropdown head and empty area.</p>
+                </div>
+                <div class="ng-modal-window">
+                  <div class="ng-select">Window ▾</div>
+                </div>
+              </article>
+
+              <article class="ng-panel ng-scale-card">
+                <div class="ng-card-title">Spacing scale</div>
+                <div class="ng-select">Table row ▾</div>
+                <div class="ng-select">◻ icon dimensions ▾</div>
+                <div class="ng-select">◉ hover/active states ▾</div>
+              </article>
+            </div>
+          </section>
+
+          <aside class="ng-specs">
+            <article class="ng-module">
+              <div>
+                <h3>Radius increments</h3>
+                <p>Tokenized corner scale and layered radius mapping.</p>
+              </div>
+              <div class="ng-select">Surface · Token ▾</div>
+              <div class="ng-select">Increment ▾</div>
+            </article>
+
+            <article class="ng-module">
+              <div>
+                <h3>Border weights (1, 1.5, 2.5px)</h3>
+                <p>Shadow intensities and small state switches.</p>
+              </div>
+              <div class="ng-spec-grid">
+                <button class="ng-dot-button">1</button>
+                <button class="ng-dot-button">2</button>
+                <button class="ng-dot-button">3</button>
+                <button class="ng-dot-button is-muted">5</button>
+                <button class="ng-dot-button is-muted">6</button>
+                <button class="ng-dot-button is-muted">−</button>
+              </div>
+              <div class="ng-mini-switch">
+                <span>on/off</span>
+                <div class="ng-mini-switch-track is-on"></div>
+                <strong>·Off</strong>
+              </div>
+            </article>
+
+            <article class="ng-module">
+              <div>
+                <h3>Icon dimensions (16, 20, 24)</h3>
+                <p>Behavior checklist for control surfaces and active rows.</p>
+              </div>
+              <div class="ng-spec-checklist">
+                <div class="ng-spec-check">
+                  <div class="ng-check-box"></div>
+                  <div>Focus ring remains persistent</div>
+                </div>
+                <div class="ng-spec-check is-muted">
+                  <div class="ng-check-box"></div>
+                  <div>Disabled state lowers contrast and eliminates shadow</div>
+                </div>
+                <div class="ng-spec-check">
+                  <div class="ng-check-box"></div>
+                  <div>Hover state adds subtle elevation</div>
+                </div>
+                <div class="ng-spec-check">
+                  <div class="ng-check-box"></div>
+                  <div>Pressed state deepens shadow</div>
+                </div>
+                <div class="ng-spec-check">
+                  <div class="ng-check-box"></div>
+                  <div>Loading state animates indicator</div>
+                </div>
+                <div class="ng-spec-check">
+                  <div class="ng-check-box"></div>
+                  <div>Active table row highlights background</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="ng-module">
+              <div>
+                <h3>Reference Controls</h3>
+                <p>Secondary view of tabs, glow chips and date cells.</p>
+              </div>
+              <div class="ng-tab-row">
+                <button class="ng-tab is-active">Window</button>
+                <button class="ng-tab">State</button>
+                <button class="ng-tab">Glow</button>
+              </div>
+              <div class="ng-chip-row">
+                <span class="ng-chip is-glow">Blue halo</span>
+                <span class="ng-chip">Muted rail</span>
+              </div>
+              <div class="ng-date-picker">
+                <div class="ng-date-head">
+                  <span>April 2026</span>
+                  <span class="ng-subtle">◂ ▸</span>
+                </div>
+                <div class="ng-date-grid ng-date-grid--labels">
+                  <span>Mo</span>
+                  <span>Tu</span>
+                  <span>We</span>
+                  <span>Th</span>
+                  <span>Fr</span>
+                  <span>Sa</span>
+                  <span>Su</span>
+                </div>
+                <div class="ng-date-grid">
+                  <button class="ng-date-cell">12</button>
+                  <button class="ng-date-cell">13</button>
+                  <button class="ng-date-cell">14</button>
+                  <button class="ng-date-cell is-active">15</button>
+                  <button class="ng-date-cell">16</button>
+                  <button class="ng-date-cell">17</button>
+                  <button class="ng-date-cell">18</button>
+                </div>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const body = document.body
+      const buttons = Array.from(document.querySelectorAll('[data-theme-target]'))
+      const params = new URLSearchParams(window.location.search)
+      const queryTheme = params.get('theme')
+      const captureMode = params.get('capture') === '1'
+      const allowedThemes = new Set(['light', 'dark'])
+
+      function applyTheme(nextTheme) {
+        const theme = allowedThemes.has(nextTheme) ? nextTheme : 'light'
+        body.setAttribute('data-theme', theme)
+
+        buttons.forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-theme-target') === theme)
+        })
+      }
+
+      applyTheme(queryTheme || body.getAttribute('data-theme'))
+
+      if (captureMode) {
+        body.classList.add('is-capture')
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const nextTheme = button.getAttribute('data-theme-target')
+          applyTheme(nextTheme)
+          const url = new URL(window.location.href)
+          url.searchParams.set('theme', nextTheme)
+          window.history.replaceState({}, '', url)
+        })
+      })
+    </script>
+  </body>
+</html>

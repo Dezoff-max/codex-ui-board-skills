@@ -1,0 +1,1362 @@
+:root {
+  --dt-radius-sm: 10px;
+  --dt-radius-md: 14px;
+  --dt-radius-lg: 18px;
+  --dt-radius-xl: 24px;
+  --dt-radius-pill: 999px;
+  --dt-space-1: 4px;
+  --dt-space-2: 8px;
+  --dt-space-3: 12px;
+  --dt-space-4: 16px;
+  --dt-space-5: 20px;
+  --dt-space-6: 24px;
+  --dt-space-7: 32px;
+  --dt-transition-fast: 160ms ease;
+  --dt-transition-normal: 220ms ease;
+}
+
+@keyframes dtFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dtFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes dtGlowPulse {
+  0%,
+  100% {
+    box-shadow: var(--dt-shadow-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 0 1px rgba(224, 122, 69, 0.18), 0 16px 32px rgba(224, 122, 69, 0.26);
+  }
+}
+
+@keyframes dtBarRise {
+  from {
+    transform: scaleY(0.4);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dtShimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes dtPathDraw {
+  from {
+    stroke-dashoffset: 240;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-theme="light"] {
+  --dt-bg-canvas: #eef2f7;
+  --dt-bg-surface: #f6f8fb;
+  --dt-bg-elevated: #ffffff;
+  --dt-bg-pressed: #dde4ec;
+  --dt-line-soft: rgba(124, 137, 160, 0.18);
+  --dt-line-strong: rgba(95, 107, 128, 0.34);
+  --dt-text: #1f2937;
+  --dt-text-muted: #6b7280;
+  --dt-text-inverse: #ffffff;
+  --dt-accent: #d97745;
+  --dt-accent-strong: #b85e31;
+  --dt-accent-muted: rgba(217, 119, 69, 0.18);
+  --dt-success: #31b46b;
+  --dt-warning: #f4b740;
+  --dt-danger: #dd5d57;
+  --dt-shadow-surface: 0 8px 20px rgba(121, 133, 153, 0.18), inset 1px 1px 0 rgba(255, 255, 255, 0.72);
+  --dt-shadow-panel: 0 18px 36px rgba(133, 145, 164, 0.22), inset 1px 1px 0 rgba(255, 255, 255, 0.88);
+  --dt-shadow-inset: inset 2px 2px 5px rgba(129, 141, 159, 0.24), inset -2px -2px 6px rgba(255, 255, 255, 0.95);
+  --dt-shadow-pressed: inset 2px 2px 7px rgba(114, 126, 145, 0.35), inset -1px -1px 4px rgba(255, 255, 255, 0.92);
+  --dt-shadow-glow: 0 0 0 1px rgba(217, 119, 69, 0.24), 0 10px 24px rgba(217, 119, 69, 0.18);
+}
+
+[data-theme="dark"] {
+  --dt-bg-canvas: #2e3640;
+  --dt-bg-surface: #3a4450;
+  --dt-bg-elevated: #46515e;
+  --dt-bg-pressed: #28303a;
+  --dt-line-soft: rgba(255, 255, 255, 0.06);
+  --dt-line-strong: rgba(255, 255, 255, 0.14);
+  --dt-text: #eff3f8;
+  --dt-text-muted: #aab4c1;
+  --dt-text-inverse: #ffffff;
+  --dt-accent: #e07a45;
+  --dt-accent-strong: #f29561;
+  --dt-accent-muted: rgba(224, 122, 69, 0.18);
+  --dt-success: #4dc98a;
+  --dt-warning: #f3b24c;
+  --dt-danger: #ef766d;
+  --dt-shadow-surface: 0 10px 24px rgba(10, 13, 18, 0.34), inset 1px 1px 0 rgba(255, 255, 255, 0.04);
+  --dt-shadow-panel: 0 18px 40px rgba(8, 10, 15, 0.44), inset 1px 1px 0 rgba(255, 255, 255, 0.05);
+  --dt-shadow-inset: inset 3px 3px 6px rgba(18, 21, 27, 0.5), inset -2px -2px 6px rgba(98, 111, 125, 0.12);
+  --dt-shadow-pressed: inset 3px 3px 8px rgba(14, 16, 21, 0.62), inset -1px -1px 4px rgba(92, 106, 121, 0.14);
+  --dt-shadow-glow: 0 0 0 1px rgba(224, 122, 69, 0.3), 0 12px 28px rgba(224, 122, 69, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.dt-theme {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--dt-bg-elevated) 68%, transparent), transparent 38%),
+    linear-gradient(180deg, color-mix(in srgb, var(--dt-bg-canvas) 86%, #000 14%), var(--dt-bg-canvas));
+  color: var(--dt-text);
+  font:
+    500 14px/1.45
+    "SF Pro Text",
+    "Avenir Next",
+    Inter,
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.dt-theme.is-capture *,
+.dt-theme.is-capture *::before,
+.dt-theme.is-capture *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+.dt-theme.is-capture .dt-board > *,
+.dt-theme.is-capture .dt-toolbar,
+.dt-theme.is-capture .dt-module,
+.dt-theme.is-capture .dt-card,
+.dt-theme.is-capture .dt-sidebar,
+.dt-theme.is-capture .dt-chart-panel,
+.dt-theme.is-capture .dt-inspector,
+.dt-theme.is-capture .dt-spark-card,
+.dt-theme.is-capture .dt-kpi-card,
+.dt-theme.is-capture .dt-list-item,
+.dt-theme.is-capture .dt-table-row,
+.dt-theme.is-capture .dt-tooltip,
+.dt-theme.is-capture .dt-toast,
+.dt-theme.is-capture .dt-banner {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.dt-theme.is-capture .dt-line-chart path {
+  stroke-dashoffset: 0 !important;
+}
+
+.dt-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.dt-toolbar {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: var(--dt-radius-xl);
+  background: color-mix(in srgb, var(--dt-bg-surface) 82%, transparent);
+  box-shadow: var(--dt-shadow-panel);
+  backdrop-filter: blur(14px);
+  animation: dtFadeUp 480ms ease both;
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-toolbar-copy h1,
+.dt-toolbar-copy p,
+.dt-card-title,
+.dt-card-subtitle,
+.dt-module-title,
+.dt-module-subtitle {
+  margin: 0;
+}
+
+.dt-toolbar-copy p,
+.dt-module-subtitle,
+.dt-text-muted {
+  color: var(--dt-text-muted);
+}
+
+.dt-toggle {
+  display: inline-flex;
+  gap: 10px;
+  padding: 8px;
+  border-radius: var(--dt-radius-pill);
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+}
+
+.dt-toggle button,
+.dt-btn,
+.dt-chip,
+.dt-tab,
+.dt-page,
+.dt-breadcrumb,
+.dt-step,
+.dt-icon-box,
+.dt-mini-button {
+  border: 0;
+  font: inherit;
+}
+
+.dt-toggle button,
+.dt-btn,
+.dt-chip,
+.dt-tab,
+.dt-page,
+.dt-mini-button,
+.dt-ghost-button {
+  cursor: pointer;
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-toggle button {
+  padding: 10px 16px;
+  border-radius: var(--dt-radius-pill);
+  color: var(--dt-text-muted);
+  background: transparent;
+}
+
+.dt-toggle button.is-active {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-board {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: 28px;
+  background: color-mix(in srgb, var(--dt-bg-surface) 94%, transparent);
+  box-shadow: var(--dt-shadow-panel);
+}
+
+.dt-board > * {
+  animation: dtFadeUp 520ms ease both;
+}
+
+.dt-board > *:nth-child(2) { animation-delay: 40ms; }
+.dt-board > *:nth-child(3) { animation-delay: 80ms; }
+.dt-board > *:nth-child(4) { animation-delay: 120ms; }
+.dt-board > *:nth-child(5) { animation-delay: 160ms; }
+.dt-board > *:nth-child(6) { animation-delay: 200ms; }
+.dt-board > *:nth-child(7) { animation-delay: 240ms; }
+.dt-board > *:nth-child(8) { animation-delay: 280ms; }
+.dt-board > *:nth-child(9) { animation-delay: 320ms; }
+.dt-board > *:nth-child(10) { animation-delay: 360ms; }
+
+.dt-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dt-module {
+  grid-column: span 4;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: var(--dt-radius-xl);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--dt-bg-elevated) 54%, var(--dt-bg-surface)), var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-module--wide {
+  grid-column: span 8;
+}
+
+.dt-section-title {
+  margin: 0 0 2px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dt-module-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dt-module-subtitle {
+  font-size: 12px;
+}
+
+.dt-surfaces {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dt-surface-sample {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  min-height: 92px;
+  padding: 12px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: var(--dt-radius-lg);
+  background: var(--dt-bg-surface);
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-surface-sample--base {
+  background: color-mix(in srgb, var(--dt-bg-surface) 84%, var(--dt-bg-canvas));
+}
+
+.dt-surface-sample--raised {
+  background: var(--dt-bg-elevated);
+}
+
+.dt-surface-sample--inset {
+  box-shadow: var(--dt-shadow-inset);
+}
+
+.dt-surface-sample--pressed {
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-pressed);
+}
+
+.dt-surface-sample span,
+.dt-token,
+.dt-stat,
+.dt-badge,
+.dt-helper,
+.dt-meta,
+.dt-range-label {
+  font-size: 11px;
+}
+
+.dt-radii,
+.dt-borders,
+.dt-icons,
+.dt-spacing,
+.dt-selectors,
+.dt-badge-row,
+.dt-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dt-radius-pill,
+.dt-border-sample,
+.dt-icon-box,
+.dt-spacing-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dt-radius-pill {
+  min-width: 64px;
+  padding: 10px 14px;
+  border: 1px solid var(--dt-line-soft);
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-border-sample {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--dt-bg-surface) 88%, transparent);
+}
+
+.dt-border-sample--soft {
+  border: 1px solid var(--dt-line-soft);
+}
+
+.dt-border-sample--strong {
+  border: 2px solid var(--dt-line-strong);
+}
+
+.dt-border-sample--accent {
+  border: 2px solid var(--dt-accent);
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-border-sample--accent-strong {
+  border: 3px solid var(--dt-accent-strong);
+}
+
+.dt-elevation {
+  position: relative;
+  min-height: 160px;
+}
+
+.dt-elevation-layer {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  height: 42px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--dt-accent-strong) 72%, #ffffff 8%), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+  animation: dtFloat 3200ms ease-in-out infinite;
+}
+
+.dt-elevation-layer:nth-child(1) {
+  top: 12px;
+  transform: perspective(220px) rotateX(28deg);
+}
+
+.dt-elevation-layer:nth-child(2) {
+  top: 46px;
+  transform: perspective(220px) rotateX(28deg) scale(0.93);
+  opacity: 0.82;
+}
+
+.dt-elevation-layer:nth-child(3) {
+  top: 80px;
+  transform: perspective(220px) rotateX(28deg) scale(0.86);
+  opacity: 0.66;
+}
+
+.dt-elevation-layer:nth-child(4) {
+  top: 114px;
+  transform: perspective(220px) rotateX(28deg) scale(0.8);
+  opacity: 0.54;
+}
+
+.dt-icon-box,
+.dt-spacing-box {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: 14px;
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  color: var(--dt-accent);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-spacing-box {
+  color: var(--dt-text-muted);
+}
+
+.dt-controls-grid,
+.dt-data-grid,
+.dt-feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dt-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: var(--dt-radius-lg);
+  background: color-mix(in srgb, var(--dt-bg-elevated) 64%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-card--inset {
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+}
+
+.dt-btn-row,
+.dt-tab-row,
+.dt-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 14px;
+  color: var(--dt-text);
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.dt-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-btn.is-active,
+.dt-btn--primary {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+  animation: dtGlowPulse 2600ms ease-in-out infinite;
+}
+
+.dt-btn--secondary {
+  box-shadow: var(--dt-shadow-surface);
+}
+
+.dt-btn--ghost {
+  color: var(--dt-text-muted);
+  background: color-mix(in srgb, var(--dt-bg-elevated) 56%, transparent);
+}
+
+.dt-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.dt-field,
+.dt-select,
+.dt-search {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: var(--dt-text);
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    border-color var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-field::placeholder,
+.dt-select,
+.dt-helper {
+  color: var(--dt-text-muted);
+}
+
+.dt-field.is-error {
+  border-color: color-mix(in srgb, var(--dt-danger) 68%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--dt-danger) 68%, transparent), var(--dt-shadow-inset);
+}
+
+.dt-field.is-focus {
+  border-color: color-mix(in srgb, var(--dt-accent) 64%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--dt-accent) 64%, transparent), var(--dt-shadow-inset);
+}
+
+.dt-switch-row,
+.dt-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dt-switch {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-switch::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  transition: transform var(--dt-transition-fast), background-color var(--dt-transition-fast);
+}
+
+.dt-switch.is-on {
+  background: color-mix(in srgb, var(--dt-accent) 26%, var(--dt-bg-pressed));
+}
+
+.dt-switch.is-on::after {
+  transform: translateX(20px);
+  background: var(--dt-accent);
+}
+
+.dt-radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-radio.is-on {
+  background:
+    radial-gradient(circle at center, var(--dt-accent) 0 42%, transparent 43%),
+    var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-slider {
+  display: grid;
+  gap: 10px;
+}
+
+.dt-slider-track {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--dt-accent-strong), var(--dt-accent));
+}
+
+.dt-slider-thumb {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--dt-accent);
+  box-shadow: var(--dt-shadow-glow);
+  transform: translate(-50%, -50%);
+  animation: dtGlowPulse 2800ms ease-in-out infinite;
+}
+
+.dt-tab {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 14px;
+  color: var(--dt-text-muted);
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-tab.is-active {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dt-breadcrumb {
+  color: var(--dt-text-muted);
+}
+
+.dt-breadcrumb.is-active {
+  color: var(--dt-accent);
+}
+
+.dt-page {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  color: var(--dt-text-muted);
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-page.is-active {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-step {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: var(--dt-text-muted);
+}
+
+.dt-step-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-step.is-active .dt-step-dot {
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-list {
+  display: grid;
+  gap: 10px;
+}
+
+.dt-list-item,
+.dt-table-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--dt-bg-elevated) 58%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-avatar,
+.dt-dot,
+.dt-progress-ring {
+  border-radius: 50%;
+}
+
+.dt-avatar {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--dt-accent-muted);
+  box-shadow: var(--dt-shadow-surface);
+  color: var(--dt-accent);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast);
+}
+
+.dt-badge--success {
+  color: var(--dt-success);
+  background: color-mix(in srgb, var(--dt-success) 18%, transparent);
+}
+
+.dt-badge--warning {
+  color: var(--dt-warning);
+  background: color-mix(in srgb, var(--dt-warning) 18%, transparent);
+}
+
+.dt-badge--danger {
+  color: var(--dt-danger);
+  background: color-mix(in srgb, var(--dt-danger) 18%, transparent);
+}
+
+.dt-tooltip,
+.dt-banner,
+.dt-toast {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--dt-bg-elevated) 62%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid color-mix(in srgb, var(--dt-accent) 34%, transparent);
+}
+
+.dt-modal {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 22px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--dt-bg-elevated) 72%, var(--dt-bg-surface)), var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-panel);
+}
+
+.dt-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.dt-toast-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.dt-progress {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.dt-progress-ring {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: var(--dt-accent);
+  background:
+    radial-gradient(circle closest-side, var(--dt-bg-surface) 68%, transparent 69%),
+    conic-gradient(var(--dt-accent) 0 42%, var(--dt-bg-pressed) 42% 100%);
+  box-shadow: var(--dt-shadow-surface);
+  font-size: 12px;
+  font-weight: 700;
+  animation: dtFloat 2600ms ease-in-out infinite;
+}
+
+.dt-progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+}
+
+.dt-progress-bar > span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--dt-accent-strong), var(--dt-accent));
+}
+
+.dt-skeleton {
+  display: grid;
+  gap: 10px;
+}
+
+.dt-skeleton-line {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--dt-bg-elevated) 24%, transparent), color-mix(in srgb, var(--dt-bg-elevated) 82%, transparent), color-mix(in srgb, var(--dt-bg-elevated) 24%, transparent));
+  box-shadow: var(--dt-shadow-inset);
+  background-size: 200% 100%;
+  animation: dtShimmer 2200ms linear infinite;
+}
+
+.dt-empty {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding: 10px 0 4px;
+  text-align: center;
+}
+
+.dt-folder {
+  width: 68px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--dt-bg-elevated) 82%, var(--dt-bg-surface)), var(--dt-bg-pressed));
+  box-shadow: var(--dt-shadow-surface);
+  animation: dtFloat 3000ms ease-in-out infinite;
+}
+
+.dt-mini-button,
+.dt-ghost-button {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 12px;
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  color: var(--dt-text-muted);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-ghost-button {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid var(--dt-line-soft);
+}
+
+.dt-table-head {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  color: var(--dt-text-muted);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-dropdown {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 14px;
+  color: var(--dt-text);
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-date-picker {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-date-picker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dt-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dt-calendar-grid--labels {
+  color: var(--dt-text-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.dt-date-cell {
+  min-height: 34px;
+  border: 0;
+  border-radius: 12px;
+  color: var(--dt-text);
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-date-cell.is-active {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-workspace {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.dt-sidebar,
+.dt-workspace-main,
+.dt-inspector,
+.dt-kpi-card,
+.dt-chart-panel,
+.dt-spark-card {
+  display: grid;
+  gap: 12px;
+}
+
+.dt-sidebar {
+  align-content: start;
+  padding: 18px;
+  border: 1px solid var(--dt-line-soft);
+  border-radius: var(--dt-radius-xl);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--dt-bg-elevated) 54%, var(--dt-bg-surface)), var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-sidebar-brand {
+  display: grid;
+  gap: 4px;
+}
+
+.dt-sidebar-nav,
+.dt-table-list {
+  display: grid;
+  gap: 10px;
+}
+
+.dt-sidebar-item {
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 14px;
+  color: var(--dt-text-muted);
+  background: var(--dt-bg-elevated);
+  box-shadow: var(--dt-shadow-surface);
+  text-align: left;
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast),
+    color var(--dt-transition-fast);
+}
+
+.dt-sidebar-item.is-active {
+  color: var(--dt-text-inverse);
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-workspace-main {
+  align-content: start;
+}
+
+.dt-workspace-topbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.dt-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dt-kpi-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--dt-bg-elevated) 66%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-kpi-card strong {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.dt-chart-panel,
+.dt-inspector {
+  padding: 16px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--dt-bg-elevated) 66%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-bars {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: end;
+  gap: 10px;
+  min-height: 140px;
+}
+
+.dt-bars span {
+  display: block;
+  min-height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--dt-accent-strong), var(--dt-accent));
+  box-shadow: var(--dt-shadow-glow);
+  transform-origin: bottom;
+  animation: dtBarRise 900ms ease both;
+}
+
+.dt-bars span:nth-child(2) { animation-delay: 60ms; }
+.dt-bars span:nth-child(3) { animation-delay: 120ms; }
+.dt-bars span:nth-child(4) { animation-delay: 180ms; }
+.dt-bars span:nth-child(5) { animation-delay: 240ms; }
+.dt-bars span:nth-child(6) { animation-delay: 300ms; }
+.dt-bars span:nth-child(7) { animation-delay: 360ms; }
+
+.dt-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dt-spark-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--dt-bg-elevated) 66%, var(--dt-bg-surface));
+  box-shadow: var(--dt-shadow-surface);
+  transition:
+    transform var(--dt-transition-fast),
+    box-shadow var(--dt-transition-fast),
+    background-color var(--dt-transition-fast);
+}
+
+.dt-line-chart {
+  height: 92px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--dt-bg-pressed);
+  box-shadow: var(--dt-shadow-inset);
+}
+
+.dt-line-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dt-line-chart path {
+  fill: none;
+  stroke: var(--dt-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: dtPathDraw 1200ms ease forwards 280ms;
+}
+
+.dt-donut-chart {
+  display: grid;
+  place-items: center;
+  min-height: 92px;
+}
+
+.dt-donut-ring {
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle closest-side, var(--dt-bg-surface) 62%, transparent 63%),
+    conic-gradient(var(--dt-accent) 0 78%, var(--dt-bg-pressed) 78% 100%);
+  box-shadow: var(--dt-shadow-surface);
+  animation: dtFloat 3000ms ease-in-out infinite;
+}
+
+.dt-toolbar:hover,
+.dt-module:hover,
+.dt-card:hover,
+.dt-sidebar:hover,
+.dt-chart-panel:hover,
+.dt-inspector:hover,
+.dt-kpi-card:hover,
+.dt-spark-card:hover,
+.dt-list-item:hover,
+.dt-table-row:hover,
+.dt-tooltip:hover,
+.dt-toast:hover,
+.dt-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--dt-shadow-panel);
+}
+
+.dt-icon-box:hover,
+.dt-spacing-box:hover,
+.dt-radius-pill:hover,
+.dt-date-cell:hover,
+.dt-mini-button:hover,
+.dt-ghost-button:hover,
+.dt-page:hover,
+.dt-sidebar-item:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: var(--dt-shadow-glow);
+}
+
+.dt-tab:hover,
+.dt-switch:hover,
+.dt-radio:hover,
+.dt-slider-track:hover,
+.dt-dropdown:hover,
+.dt-date-picker:hover,
+.dt-search:hover,
+.dt-field:hover:not(.is-focus):not(.is-error) {
+  transform: translateY(-1px);
+  box-shadow: var(--dt-shadow-surface);
+}
+}
+
+@media (max-width: 1200px) {
+  .dt-module,
+  .dt-module--wide {
+    grid-column: span 6;
+  }
+
+  .dt-controls-grid,
+  .dt-data-grid,
+  .dt-feedback-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dt-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .dt-shell {
+    padding: 18px;
+  }
+
+  .dt-row,
+  .dt-controls-grid,
+  .dt-data-grid,
+  .dt-feedback-grid,
+  .dt-surfaces,
+  .dt-kpi-row,
+  .dt-chart-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dt-module,
+  .dt-module--wide {
+    grid-column: span 12;
+  }
+
+  .dt-toolbar {
+    position: static;
+  }
+
+  .dt-workspace-topbar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

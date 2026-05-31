@@ -1,0 +1,59 @@
+{
+  "name": "LiquidGlassAuroraBoard",
+  "themes": {
+    "light": {
+      "bg": "#f4eae7",
+      "bgAccent": "#f1e7fb",
+      "panel": "rgba(255, 255, 255, 0.34)",
+      "panelStrong": "rgba(255, 255, 255, 0.48)",
+      "panelSoft": "rgba(255, 255, 255, 0.2)",
+      "line": "rgba(255, 255, 255, 0.44)",
+      "text": "#2a242f",
+      "muted": "rgba(65, 57, 74, 0.62)",
+      "purple": "#8155ff",
+      "purpleSoft": "#b887ff",
+      "cyan": "#53dde3",
+      "mint": "#7ef0d8",
+      "pink": "#ff8ec9",
+      "shadow": "0 24px 60px rgba(115, 90, 140, 0.18)",
+      "glowPurple": "0 18px 40px rgba(129, 85, 255, 0.35)",
+      "glowCyan": "0 18px 38px rgba(83, 221, 227, 0.3)"
+    },
+    "dark": {
+      "bg": "#181522",
+      "bgAccent": "#1f1f30",
+      "panel": "rgba(33, 34, 50, 0.42)",
+      "panelStrong": "rgba(41, 43, 66, 0.58)",
+      "panelSoft": "rgba(255, 255, 255, 0.08)",
+      "line": "rgba(255, 255, 255, 0.18)",
+      "text": "#f6efff",
+      "muted": "rgba(236, 227, 255, 0.68)",
+      "purple": "#9b7cff",
+      "purpleSoft": "#d0b8ff",
+      "cyan": "#62dff1",
+      "mint": "#7df1d8",
+      "pink": "#ff91ce",
+      "shadow": "0 28px 70px rgba(4, 4, 12, 0.48)",
+      "glowPurple": "0 18px 44px rgba(155, 124, 255, 0.42)",
+      "glowCyan": "0 18px 42px rgba(98, 223, 241, 0.36)"
+    }
+  },
+  "semantic": {
+    "radius": {
+      "panel": "32px",
+      "control": "999px",
+      "small": "20px"
+    },
+    "blur": {
+      "glass": "22px",
+      "strong": "30px"
+    },
+    "spacing": {
+      "xs": "8px",
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px"
+    }
+  }
+}

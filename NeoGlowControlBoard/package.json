@@ -1,0 +1,36 @@
+{
+  "name": "neo-glow-control-board",
+  "version": "1.0.0",
+  "description": "Portable neo-glow control board UI kit with dual themes, luminous accents, design tokens, preview board, and bundled Codex skill.",
+  "private": false,
+  "main": "./tailwind.preset.cjs",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "default": "./tailwind.preset.cjs"
+    },
+    "./css": "./index.css",
+    "./tokens": "./NeoGlowControlBoard.tokens.json",
+    "./preview": "./preview.html",
+    "./tailwind-preset": "./tailwind.preset.cjs"
+  },
+  "files": [
+    "index.css",
+    "NeoGlowControlBoard.css",
+    "NeoGlowControlBoard.tokens.json",
+    "tailwind.preset.cjs",
+    "preview.html",
+    "README.md",
+    "screenshots",
+    "codex-skill"
+  ],
+  "keywords": [
+    "neumorphism",
+    "glow-ui",
+    "dual-theme",
+    "design-system",
+    "ui-spec-board",
+    "codex-skill"
+  ],
+  "license": "MIT"
+}

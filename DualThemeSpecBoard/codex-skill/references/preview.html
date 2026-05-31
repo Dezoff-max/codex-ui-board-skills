@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DualThemeSpecBoard Preview</title>
+    <link rel="stylesheet" href="./DualThemeSpecBoard.css" />
+  </head>
+  <body class="dt-theme" data-theme="dark">
+    <main class="dt-shell">
+      <section class="dt-toolbar">
+        <div class="dt-toolbar-copy">
+          <p class="dt-text-muted">DualThemeSpecBoard UI Kit + Codex Skill</p>
+          <h1>Complete UI board template for light and dark themes</h1>
+        </div>
+        <div class="dt-toggle" aria-label="Theme toggle">
+          <button type="button" data-theme-target="light">Light</button>
+          <button type="button" class="is-active" data-theme-target="dark">Dark</button>
+        </div>
+      </section>
+
+      <section class="dt-board">
+        <div>
+          <p class="dt-text-muted">Industrial system UI board</p>
+          <h2 class="dt-section-title">Foundations</h2>
+        </div>
+
+        <div class="dt-row">
+          <article class="dt-module">
+            <div>
+              <h3 class="dt-module-title">Surfaces</h3>
+              <p class="dt-module-subtitle">Base, raised, inset, and pressed surfaces.</p>
+            </div>
+            <div class="dt-surfaces">
+              <div class="dt-surface-sample dt-surface-sample--base"><span>Base</span></div>
+              <div class="dt-surface-sample dt-surface-sample--raised"><span>Raised</span></div>
+              <div class="dt-surface-sample dt-surface-sample--inset"><span>Inset</span></div>
+              <div class="dt-surface-sample dt-surface-sample--pressed"><span>Pressed</span></div>
+            </div>
+          </article>
+
+          <article class="dt-module">
+            <div>
+              <h3 class="dt-module-title">Elevation</h3>
+              <p class="dt-module-subtitle">The same accent behavior across multiple depth levels.</p>
+            </div>
+            <div class="dt-elevation">
+              <div class="dt-elevation-layer"></div>
+              <div class="dt-elevation-layer"></div>
+              <div class="dt-elevation-layer"></div>
+              <div class="dt-elevation-layer"></div>
+            </div>
+          </article>
+
+          <article class="dt-module">
+            <div>
+              <h3 class="dt-module-title">Iconography</h3>
+              <p class="dt-module-subtitle">Neutral system icons with accent treatment for active states.</p>
+            </div>
+            <div class="dt-icons">
+              <div class="dt-icon-box">✦</div>
+              <div class="dt-icon-box">⚙</div>
+              <div class="dt-icon-box">⌘</div>
+              <div class="dt-icon-box">✉</div>
+              <div class="dt-icon-box">⌂</div>
+              <div class="dt-icon-box">☰</div>
+              <div class="dt-icon-box">🔔</div>
+              <div class="dt-icon-box">★</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="dt-row">
+          <article class="dt-module dt-module--wide">
+            <div>
+              <h3 class="dt-module-title">Borders, Radii & Spacing</h3>
+              <p class="dt-module-subtitle">Borders, radii, and spacing as one coherent system.</p>
+            </div>
+            <div class="dt-borders">
+              <div class="dt-border-sample dt-border-sample--soft"></div>
+              <div class="dt-border-sample dt-border-sample--strong"></div>
+              <div class="dt-border-sample dt-border-sample--accent"></div>
+              <div class="dt-border-sample dt-border-sample--accent-strong"></div>
+            </div>
+            <div class="dt-radii">
+              <div class="dt-radius-pill" style="border-radius: 10px;">10</div>
+              <div class="dt-radius-pill" style="border-radius: 14px;">14</div>
+              <div class="dt-radius-pill" style="border-radius: 18px;">18</div>
+              <div class="dt-radius-pill" style="border-radius: 24px;">24</div>
+              <div class="dt-radius-pill" style="border-radius: 999px;">pill</div>
+            </div>
+            <div class="dt-spacing">
+              <div class="dt-spacing-box">4</div>
+              <div class="dt-spacing-box">8</div>
+              <div class="dt-spacing-box">12</div>
+              <div class="dt-spacing-box">16</div>
+              <div class="dt-spacing-box">20</div>
+              <div class="dt-spacing-box">24</div>
+              <div class="dt-spacing-box">32</div>
+            </div>
+          </article>
+
+          <article class="dt-module">
+            <div>
+              <h3 class="dt-module-title">Token Notes</h3>
+              <p class="dt-module-subtitle">Themes switch through tokens, not component markup.</p>
+            </div>
+            <div class="dt-card dt-card--inset">
+              <div class="dt-token">bg.canvas</div>
+              <div class="dt-token">bg.surface</div>
+              <div class="dt-token">text.primary</div>
+              <div class="dt-token">accent</div>
+              <div class="dt-token">shadow.panel</div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="dt-text-muted">Full interactive state coverage</p>
+          <h2 class="dt-section-title">Controls</h2>
+        </div>
+
+        <div class="dt-controls-grid">
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Buttons</h3>
+              <p class="dt-module-subtitle">Primary, secondary, ghost, and disabled states.</p>
+            </div>
+            <div class="dt-btn-row">
+              <button class="dt-btn dt-btn--primary">Action</button>
+              <button class="dt-btn dt-btn--secondary">Processing</button>
+              <button class="dt-btn dt-btn--ghost">Tertiary</button>
+              <button class="dt-btn" disabled>Disabled</button>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Text Fields</h3>
+              <p class="dt-module-subtitle">Default, focus, and error states.</p>
+            </div>
+            <input class="dt-field" placeholder="Default state" />
+            <input class="dt-field is-focus" value="Focused input" />
+            <input class="dt-field is-error" value="Error invalid entry" />
+            <div class="dt-helper">Helper text for system content fields.</div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Selection & Slider</h3>
+              <p class="dt-module-subtitle">Switch, radio, and slider using the same visual language.</p>
+            </div>
+            <div class="dt-switch-row">
+              <div class="dt-switch is-on"></div>
+              <div class="dt-switch"></div>
+            </div>
+            <div class="dt-radio-row">
+              <div class="dt-radio is-on"></div>
+              <div class="dt-radio"></div>
+              <div class="dt-radio"></div>
+            </div>
+            <div class="dt-slider">
+              <div class="dt-slider-track">
+                <div class="dt-slider-fill"></div>
+                <div class="dt-slider-thumb"></div>
+              </div>
+              <div class="dt-range-label">0% · 25% · 50% · 75% · 100%</div>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Dropdown & Date Picker</h3>
+              <p class="dt-module-subtitle">Status filters, periods, and dense schedule inputs.</p>
+            </div>
+            <div class="dt-dropdown">
+              <span class="dt-text-muted">Status</span>
+              <span>In review</span>
+              <span>▾</span>
+            </div>
+            <div class="dt-date-picker">
+              <div class="dt-date-picker-head">
+                <span>April 2026</span>
+                <span class="dt-text-muted">◂ ▸</span>
+              </div>
+              <div class="dt-calendar-grid dt-calendar-grid--labels">
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+                <span>Su</span>
+              </div>
+              <div class="dt-calendar-grid">
+                <button class="dt-date-cell">12</button>
+                <button class="dt-date-cell">13</button>
+                <button class="dt-date-cell">14</button>
+                <button class="dt-date-cell is-active">15</button>
+                <button class="dt-date-cell">16</button>
+                <button class="dt-date-cell">17</button>
+                <button class="dt-date-cell">18</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="dt-text-muted">Entry points and navigation patterns</p>
+          <h2 class="dt-section-title">Navigation</h2>
+        </div>
+
+        <div class="dt-controls-grid">
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Tabs</h3>
+              <p class="dt-module-subtitle">Local navigation for the current context.</p>
+            </div>
+            <div class="dt-tab-row">
+              <button class="dt-tab is-active">Overview</button>
+              <button class="dt-tab">Details</button>
+              <button class="dt-tab">Settings</button>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Breadcrumbs & Pagination</h3>
+              <p class="dt-module-subtitle">Context and movement through long lists.</p>
+            </div>
+            <div class="dt-breadcrumbs">
+              <span class="dt-breadcrumb">Home</span>
+              <span class="dt-breadcrumb is-active">Projects</span>
+              <span class="dt-breadcrumb">Workspace</span>
+            </div>
+            <div class="dt-pagination">
+              <button class="dt-page">1</button>
+              <button class="dt-page is-active">2</button>
+              <button class="dt-page">3</button>
+              <button class="dt-page">4</button>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Process</h3>
+              <p class="dt-module-subtitle">Stepper for processes, onboarding, and flows.</p>
+            </div>
+            <div class="dt-steps">
+              <div class="dt-step">
+                <div class="dt-step-dot"></div>
+                <span>Step 1</span>
+              </div>
+              <div class="dt-step is-active">
+                <div class="dt-step-dot"></div>
+                <span>Step 2</span>
+              </div>
+              <div class="dt-step">
+                <div class="dt-step-dot"></div>
+                <span>Step 3</span>
+              </div>
+              <div class="dt-step">
+                <div class="dt-step-dot"></div>
+                <span>Step 4</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="dt-text-muted">A real product surface built from the same system</p>
+          <h2 class="dt-section-title">Workspace Layout</h2>
+        </div>
+
+        <div class="dt-row">
+          <article class="dt-module dt-module--wide">
+            <div>
+              <h3 class="dt-module-title">Sidebar + Main Canvas</h3>
+              <p class="dt-module-subtitle">A production-like layout showing navigation, KPIs, search, and charting.</p>
+            </div>
+            <div class="dt-workspace">
+              <aside class="dt-sidebar">
+                <div class="dt-sidebar-brand">
+                  <strong>Control</strong>
+                  <span class="dt-text-muted">Operations board</span>
+                </div>
+                <div class="dt-sidebar-nav">
+                  <button class="dt-sidebar-item is-active">Overview</button>
+                  <button class="dt-sidebar-item">Analytics</button>
+                  <button class="dt-sidebar-item">Projects</button>
+                  <button class="dt-sidebar-item">Team</button>
+                  <button class="dt-sidebar-item">Files</button>
+                </div>
+              </aside>
+
+              <section class="dt-workspace-main">
+                <div class="dt-workspace-topbar">
+                  <div class="dt-search">Search reports, metrics, or team notes</div>
+                  <button class="dt-btn dt-btn--primary">New Report</button>
+                </div>
+
+                <div class="dt-kpi-row">
+                  <div class="dt-kpi-card">
+                    <span class="dt-text-muted">Open tasks</span>
+                    <strong>48</strong>
+                  </div>
+                  <div class="dt-kpi-card">
+                    <span class="dt-text-muted">Velocity</span>
+                    <strong>+12%</strong>
+                  </div>
+                  <div class="dt-kpi-card">
+                    <span class="dt-text-muted">Health score</span>
+                    <strong>92</strong>
+                  </div>
+                </div>
+
+                <div class="dt-chart-panel">
+                  <div>
+                    <div class="dt-card-title">Weekly flow</div>
+                    <div class="dt-card-subtitle dt-text-muted">Output trend by operating segment</div>
+                  </div>
+                  <div class="dt-bars">
+                    <span style="height: 34%;"></span>
+                    <span style="height: 48%;"></span>
+                    <span style="height: 42%;"></span>
+                    <span style="height: 68%;"></span>
+                    <span style="height: 60%;"></span>
+                    <span style="height: 80%;"></span>
+                    <span style="height: 72%;"></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+
+          <article class="dt-module">
+            <div>
+              <h3 class="dt-module-title">Inspector</h3>
+              <p class="dt-module-subtitle">Secondary context for the selected object and quiet actions.</p>
+            </div>
+            <div class="dt-inspector">
+              <div class="dt-card dt-card--inset">
+                <div class="dt-card-title">Selected report</div>
+                <div class="dt-card-subtitle dt-text-muted">Revenue summary · Updated 5m ago</div>
+              </div>
+              <div class="dt-badge-row">
+                <span class="dt-badge">Draft</span>
+                <span class="dt-badge dt-badge--success">Synced</span>
+              </div>
+              <button class="dt-btn">Share</button>
+              <button class="dt-btn dt-btn--ghost">Archive</button>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="dt-text-muted">Cards, lists, tables, and statuses</p>
+          <h2 class="dt-section-title">Data Display</h2>
+        </div>
+
+        <div class="dt-data-grid">
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Cards</h3>
+              <p class="dt-module-subtitle">Cards for entities and summary blocks.</p>
+            </div>
+            <div class="dt-card dt-card--inset">
+              <div class="dt-card-title">Project Alpha</div>
+              <div class="dt-card-subtitle dt-text-muted">Progress 48%</div>
+              <button class="dt-mini-button">View Details</button>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">List Items</h3>
+              <p class="dt-module-subtitle">List items for tasks and objects.</p>
+            </div>
+            <div class="dt-list">
+              <div class="dt-list-item">
+                <div class="dt-avatar">A</div>
+                <div>
+                  <div>Item 1 · Description</div>
+                  <div class="dt-meta dt-text-muted">Secondary supporting text</div>
+                </div>
+                <span class="dt-badge">Trailing</span>
+              </div>
+              <div class="dt-list-item">
+                <div class="dt-avatar">B</div>
+                <div>
+                  <div>Item 2 · Description</div>
+                  <div class="dt-meta dt-text-muted">Operational metadata</div>
+                </div>
+                <span class="dt-badge dt-badge--success">Ready</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Badges, Table Head & Tooltip</h3>
+              <p class="dt-module-subtitle">Statuses and compact system elements.</p>
+            </div>
+            <div class="dt-badge-row">
+              <span class="dt-badge">In review</span>
+              <span class="dt-badge dt-badge--success">Done</span>
+              <span class="dt-badge dt-badge--warning">Warning</span>
+              <span class="dt-badge dt-badge--danger">Risk</span>
+            </div>
+            <div class="dt-table-head">
+              <span>Name</span>
+              <span>Status</span>
+              <span>Date</span>
+              <button class="dt-ghost-button">Filter</button>
+            </div>
+            <div class="dt-tooltip">More info</div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Table Rows</h3>
+              <p class="dt-module-subtitle">Operational rows for reports, jobs, and review queues.</p>
+            </div>
+            <div class="dt-table-list">
+              <div class="dt-table-row">
+                <span>Q2 Revenue</span>
+                <span class="dt-badge dt-badge--success">Ready</span>
+                <span class="dt-meta dt-text-muted">Apr 15</span>
+              </div>
+              <div class="dt-table-row">
+                <span>Churn Watch</span>
+                <span class="dt-badge dt-badge--warning">Review</span>
+                <span class="dt-meta dt-text-muted">Apr 16</span>
+              </div>
+              <div class="dt-table-row">
+                <span>Pipeline Sync</span>
+                <span class="dt-badge dt-badge--danger">Risk</span>
+                <span class="dt-meta dt-text-muted">Apr 17</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Charts</h3>
+              <p class="dt-module-subtitle">Compact chart widgets for dashboard and analytics panels.</p>
+            </div>
+            <div class="dt-chart-grid">
+              <div class="dt-spark-card">
+                <div class="dt-card-title">Conversion</div>
+                <div class="dt-line-chart">
+                  <svg viewBox="0 0 180 72" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M 4 54 C 26 48, 34 50, 54 36 S 92 18, 112 28 S 148 50, 176 22" />
+                  </svg>
+                </div>
+              </div>
+              <div class="dt-spark-card">
+                <div class="dt-card-title">Capacity</div>
+                <div class="dt-donut-chart">
+                  <div class="dt-donut-ring">78%</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="dt-text-muted">System feedback and loading states</p>
+          <h2 class="dt-section-title">Feedback</h2>
+        </div>
+
+        <div class="dt-feedback-grid">
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Modal</h3>
+              <p class="dt-module-subtitle">Critical confirmation or blocking decision.</p>
+            </div>
+            <div class="dt-modal">
+              <strong>Confirm Action</strong>
+              <p class="dt-text-muted">Are you sure you want to continue?</p>
+              <div class="dt-modal-actions">
+                <button class="dt-btn dt-btn--ghost">Cancel</button>
+                <button class="dt-btn dt-btn--primary">Confirm</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Toast Stack & Progress</h3>
+              <p class="dt-module-subtitle">Non-blocking notifications and long-running operations.</p>
+            </div>
+            <div class="dt-toast-stack">
+              <div class="dt-toast">Success: file saved.</div>
+              <div class="dt-toast">Info: new update available.</div>
+              <div class="dt-toast">Warning: connection unstable.</div>
+            </div>
+            <div class="dt-progress">
+              <div class="dt-progress-ring">45%</div>
+              <div class="dt-progress-bar"><span></span></div>
+            </div>
+          </article>
+
+          <article class="dt-card">
+            <div>
+              <h3 class="dt-module-title">Alert, Skeleton & Empty</h3>
+              <p class="dt-module-subtitle">Messages, loading, and empty states.</p>
+            </div>
+            <div class="dt-banner">
+              <span>Critical error: system overload.</span>
+              <button class="dt-mini-button">Dismiss</button>
+            </div>
+            <div class="dt-skeleton">
+              <div class="dt-skeleton-line"></div>
+              <div class="dt-skeleton-line" style="width: 82%;"></div>
+              <div class="dt-skeleton-line" style="width: 64%;"></div>
+            </div>
+            <div class="dt-empty">
+              <div class="dt-folder"></div>
+              <div class="dt-text-muted">No results found</div>
+              <button class="dt-mini-button">Create New</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const body = document.body
+      const buttons = Array.from(document.querySelectorAll('[data-theme-target]'))
+      const params = new URLSearchParams(window.location.search)
+      const queryTheme = params.get('theme')
+      const captureMode = params.get('capture') === '1'
+      const allowedThemes = new Set(['light', 'dark'])
+
+      function applyTheme(nextTheme) {
+        const theme = allowedThemes.has(nextTheme) ? nextTheme : 'dark'
+        body.setAttribute('data-theme', theme)
+
+        buttons.forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-theme-target') === theme)
+        })
+      }
+
+      applyTheme(queryTheme || body.getAttribute('data-theme'))
+
+      if (captureMode) {
+        body.classList.add('is-capture')
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const nextTheme = button.getAttribute('data-theme-target')
+          applyTheme(nextTheme)
+          const url = new URL(window.location.href)
+          url.searchParams.set('theme', nextTheme)
+          window.history.replaceState({}, '', url)
+        })
+      })
+    </script>
+  </body>
+</html>

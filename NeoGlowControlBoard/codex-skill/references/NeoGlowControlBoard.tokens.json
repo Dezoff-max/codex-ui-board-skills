@@ -1,0 +1,107 @@
+{
+  "name": "NeoGlowControlBoard",
+  "version": "1.0.0",
+  "semantic": {
+    "colors": [
+      "bgCanvas",
+      "bgSurface",
+      "bgInset",
+      "bgRail",
+      "textPrimary",
+      "textMuted",
+      "lineSoft",
+      "accentBlue",
+      "accentBlueLight",
+      "accentCyan",
+      "accentGlow",
+      "danger",
+      "success"
+    ],
+    "radii": [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+      "pill"
+    ],
+    "shadows": [
+      "surface",
+      "panel",
+      "inset",
+      "glowSoft",
+      "glowStrong"
+    ]
+  },
+  "themes": {
+    "light": {
+      "colors": {
+        "bgCanvas": "#edf1f6",
+        "bgSurface": "#f6f8fb",
+        "bgInset": "#e3e8f0",
+        "bgRail": "#dce3ec",
+        "textPrimary": "#1f2535",
+        "textMuted": "#788398",
+        "lineSoft": "rgba(132, 147, 170, 0.18)",
+        "accentBlue": "#2d7dfb",
+        "accentBlueLight": "#53b7ff",
+        "accentCyan": "#56e0ff",
+        "accentGlow": "rgba(63, 146, 255, 0.42)",
+        "danger": "#ff6f7e",
+        "success": "#38cb89"
+      },
+      "radii": {
+        "sm": "12px",
+        "md": "18px",
+        "lg": "24px",
+        "xl": "30px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "surface": "0 10px 24px rgba(163, 176, 197, 0.22), inset 1px 1px 0 rgba(255, 255, 255, 0.9)",
+        "panel": "0 20px 44px rgba(164, 175, 195, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.92)",
+        "inset": "inset 3px 3px 6px rgba(163, 175, 194, 0.28), inset -3px -3px 6px rgba(255, 255, 255, 0.96)",
+        "glowSoft": "0 0 0 1px rgba(70, 158, 255, 0.24), 0 0 22px rgba(78, 169, 255, 0.3), 0 12px 28px rgba(70, 158, 255, 0.18)",
+        "glowStrong": "0 0 0 1px rgba(56, 168, 255, 0.34), 0 0 32px rgba(61, 178, 255, 0.44), 0 18px 40px rgba(53, 141, 255, 0.26)"
+      }
+    },
+    "dark": {
+      "colors": {
+        "bgCanvas": "#151d2b",
+        "bgSurface": "#202a39",
+        "bgInset": "#161f2d",
+        "bgRail": "#1c2533",
+        "textPrimary": "#f0f5ff",
+        "textMuted": "#93a2ba",
+        "lineSoft": "rgba(172, 192, 222, 0.12)",
+        "accentBlue": "#3f8cff",
+        "accentBlueLight": "#60ccff",
+        "accentCyan": "#70e9ff",
+        "accentGlow": "rgba(73, 164, 255, 0.42)",
+        "danger": "#ff7f92",
+        "success": "#42d994"
+      },
+      "radii": {
+        "sm": "12px",
+        "md": "18px",
+        "lg": "24px",
+        "xl": "30px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "surface": "0 12px 28px rgba(6, 10, 16, 0.46), inset 1px 1px 0 rgba(255, 255, 255, 0.05)",
+        "panel": "0 20px 48px rgba(6, 10, 16, 0.58), inset 1px 1px 0 rgba(255, 255, 255, 0.06)",
+        "inset": "inset 4px 4px 8px rgba(7, 10, 15, 0.62), inset -3px -3px 8px rgba(70, 92, 120, 0.12)",
+        "glowSoft": "0 0 0 1px rgba(64, 151, 255, 0.24), 0 0 24px rgba(64, 151, 255, 0.24), 0 12px 30px rgba(41, 112, 222, 0.24)",
+        "glowStrong": "0 0 0 1px rgba(74, 181, 255, 0.4), 0 0 36px rgba(84, 190, 255, 0.5), 0 20px 40px rgba(43, 116, 241, 0.32)"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": "\"SF Pro Display\", \"SF Pro Text\", Inter, \"Segoe UI\", system-ui, sans-serif",
+    "bodySize": "14px",
+    "lineHeight": 1.45,
+    "labelSize": "12px",
+    "titleWeight": 700,
+    "bodyWeight": 500
+  }
+}

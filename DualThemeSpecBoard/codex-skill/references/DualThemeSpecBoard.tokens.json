@@ -1,0 +1,122 @@
+{
+  "name": "DualThemeSpecBoard",
+  "version": "1.0.0",
+  "semantic": {
+    "colors": [
+      "bgCanvas",
+      "bgSurface",
+      "bgElevated",
+      "bgPressed",
+      "lineSoft",
+      "lineStrong",
+      "textPrimary",
+      "textMuted",
+      "textInverse",
+      "accent",
+      "accentStrong",
+      "accentMuted",
+      "success",
+      "warning",
+      "danger"
+    ],
+    "radii": [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+      "pill"
+    ],
+    "shadows": [
+      "surface",
+      "panel",
+      "inset",
+      "pressed",
+      "glow"
+    ],
+    "spacing": [
+      "4",
+      "8",
+      "12",
+      "16",
+      "20",
+      "24",
+      "32"
+    ]
+  },
+  "themes": {
+    "light": {
+      "colors": {
+        "bgCanvas": "#eef2f7",
+        "bgSurface": "#f6f8fb",
+        "bgElevated": "#ffffff",
+        "bgPressed": "#dde4ec",
+        "lineSoft": "rgba(124, 137, 160, 0.18)",
+        "lineStrong": "rgba(95, 107, 128, 0.34)",
+        "textPrimary": "#1f2937",
+        "textMuted": "#6b7280",
+        "textInverse": "#ffffff",
+        "accent": "#d97745",
+        "accentStrong": "#b85e31",
+        "accentMuted": "rgba(217, 119, 69, 0.18)",
+        "success": "#31b46b",
+        "warning": "#f4b740",
+        "danger": "#dd5d57"
+      },
+      "radii": {
+        "sm": "10px",
+        "md": "14px",
+        "lg": "18px",
+        "xl": "24px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "surface": "0 8px 20px rgba(121, 133, 153, 0.18), inset 1px 1px 0 rgba(255, 255, 255, 0.72)",
+        "panel": "0 18px 36px rgba(133, 145, 164, 0.22), inset 1px 1px 0 rgba(255, 255, 255, 0.88)",
+        "inset": "inset 2px 2px 5px rgba(129, 141, 159, 0.24), inset -2px -2px 6px rgba(255, 255, 255, 0.95)",
+        "pressed": "inset 2px 2px 7px rgba(114, 126, 145, 0.35), inset -1px -1px 4px rgba(255, 255, 255, 0.92)",
+        "glow": "0 0 0 1px rgba(217, 119, 69, 0.24), 0 10px 24px rgba(217, 119, 69, 0.18)"
+      }
+    },
+    "dark": {
+      "colors": {
+        "bgCanvas": "#2e3640",
+        "bgSurface": "#3a4450",
+        "bgElevated": "#46515e",
+        "bgPressed": "#28303a",
+        "lineSoft": "rgba(255, 255, 255, 0.06)",
+        "lineStrong": "rgba(255, 255, 255, 0.14)",
+        "textPrimary": "#eff3f8",
+        "textMuted": "#aab4c1",
+        "textInverse": "#ffffff",
+        "accent": "#e07a45",
+        "accentStrong": "#f29561",
+        "accentMuted": "rgba(224, 122, 69, 0.18)",
+        "success": "#4dc98a",
+        "warning": "#f3b24c",
+        "danger": "#ef766d"
+      },
+      "radii": {
+        "sm": "10px",
+        "md": "14px",
+        "lg": "18px",
+        "xl": "24px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "surface": "0 10px 24px rgba(10, 13, 18, 0.34), inset 1px 1px 0 rgba(255, 255, 255, 0.04)",
+        "panel": "0 18px 40px rgba(8, 10, 15, 0.44), inset 1px 1px 0 rgba(255, 255, 255, 0.05)",
+        "inset": "inset 3px 3px 6px rgba(18, 21, 27, 0.5), inset -2px -2px 6px rgba(98, 111, 125, 0.12)",
+        "pressed": "inset 3px 3px 8px rgba(14, 16, 21, 0.62), inset -1px -1px 4px rgba(92, 106, 121, 0.14)",
+        "glow": "0 0 0 1px rgba(224, 122, 69, 0.3), 0 12px 28px rgba(224, 122, 69, 0.2)"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": "\"SF Pro Text\", \"Avenir Next\", Inter, \"Segoe UI\", system-ui, sans-serif",
+    "bodySize": "14px",
+    "lineHeight": 1.45,
+    "labelSize": "11px",
+    "titleWeight": 700,
+    "bodyWeight": 500
+  }
+}
