@@ -33,29 +33,12 @@ This project is useful for:
 
 Each skill includes light and dark screenshots in its `screenshots/` folder.
 
-### Dual Theme Spec Board
-
-![Dual Theme Spec Board light preview](./DualThemeSpecBoard/screenshots/dual-theme-spec-board-light.png)
-
-![Dual Theme Spec Board dark preview](./DualThemeSpecBoard/screenshots/dual-theme-spec-board-dark.png)
-
-### Liquid Glass Aurora Board
-
-![Liquid Glass Aurora Board light preview](./LiquidGlassAuroraBoard/screenshots/liquid-glass-aurora-board-light.png)
-
-![Liquid Glass Aurora Board dark preview](./LiquidGlassAuroraBoard/screenshots/liquid-glass-aurora-board-dark.png)
-
-### Neo Glow Control Board
-
-![Neo Glow Control Board light preview](./NeoGlowControlBoard/screenshots/neo-glow-control-board-light.png)
-
-![Neo Glow Control Board dark preview](./NeoGlowControlBoard/screenshots/neo-glow-control-board-dark.png)
-
-### Soft Neumorphic Dual Theme Board
-
-![Soft Neumorphic Dual Theme Board light preview](./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-light.png)
-
-![Soft Neumorphic Dual Theme Board dark preview](./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-dark.png)
+| Skill | Light | Dark |
+| --- | --- | --- |
+| [Dual Theme Spec Board](./DualThemeSpecBoard) | <img src="./DualThemeSpecBoard/screenshots/dual-theme-spec-board-light.png" alt="Dual Theme Spec Board light preview" width="360"> | <img src="./DualThemeSpecBoard/screenshots/dual-theme-spec-board-dark.png" alt="Dual Theme Spec Board dark preview" width="360"> |
+| [Liquid Glass Aurora Board](./LiquidGlassAuroraBoard) | <img src="./LiquidGlassAuroraBoard/screenshots/liquid-glass-aurora-board-light.png" alt="Liquid Glass Aurora Board light preview" width="360"> | <img src="./LiquidGlassAuroraBoard/screenshots/liquid-glass-aurora-board-dark.png" alt="Liquid Glass Aurora Board dark preview" width="360"> |
+| [Neo Glow Control Board](./NeoGlowControlBoard) | <img src="./NeoGlowControlBoard/screenshots/neo-glow-control-board-light.png" alt="Neo Glow Control Board light preview" width="360"> | <img src="./NeoGlowControlBoard/screenshots/neo-glow-control-board-dark.png" alt="Neo Glow Control Board dark preview" width="360"> |
+| [Soft Neumorphic Dual Theme Board](./SoftNeumorphicDualThemeBoard) | <img src="./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-light.png" alt="Soft Neumorphic Dual Theme Board light preview" width="360"> | <img src="./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-dark.png" alt="Soft Neumorphic Dual Theme Board dark preview" width="360"> |
 
 ## Installation
 
