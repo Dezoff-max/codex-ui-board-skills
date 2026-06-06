@@ -88,6 +88,36 @@ preview.html?theme=light&capture=1
 preview.html?theme=dark&capture=1
 ```
 
+## Static Gallery
+
+The repository includes a static gallery for GitHub Pages:
+
+```sh
+open index.html
+```
+
+After the Pages workflow is enabled on `main`, the expected public URL is:
+
+```text
+https://dezoff-max.github.io/codex-ui-board-skills/
+```
+
+## Quality Checks
+
+Run the repository validation before opening a pull request or release:
+
+```sh
+npm run validate
+```
+
+The validation checks:
+
+- required repository and skill files
+- valid `package.json` and `*.tokens.json` files
+- skill names matching package names
+- screenshot asset presence
+- synced `codex-skill/references/` files
+
 ## Codex Prompt Examples
 
 Use the skills directly in Codex prompts:
@@ -123,10 +153,15 @@ Good prompts usually include:
 ├── LiquidGlassAuroraBoard/
 ├── NeoGlowControlBoard/
 ├── SoftNeumorphicDualThemeBoard/
+├── index.html
+├── site.css
 ├── ROADMAP.md
+├── RELEASE_CHECKLIST.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
 ├── CODE_OF_CONDUCT.md
+├── package.json
+├── scripts/
 ├── AGENTS.md
 └── .github/
 ```
@@ -180,13 +215,15 @@ Use the preset when you want the token system available inside an existing Tailw
 Near-term roadmap themes:
 
 - improve documentation and screenshot presentation
+- maintain the static gallery for GitHub Pages
 - add more example prompts for each skill
-- add validation for token files and folder structure
+- keep validation for token files, folder structure, and synced references
 - add automated screenshot generation
 - expand the collection with more specialized UI board skills
 - add accessibility and quality checklists
 
 See [ROADMAP.md](./ROADMAP.md) for the full roadmap.
+See [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) before publishing a tag, package, or public release.
 
 ## Contributing
 
