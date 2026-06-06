@@ -1,0 +1,40 @@
+name: New skill proposal
+description: Propose a new Codex UI board skill.
+title: "New skill: "
+labels:
+  - enhancement
+  - new-skill
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill name
+      placeholder: FinanceDashboardBoard
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What product surface or maintainer workflow should this skill support?
+    validations:
+      required: true
+  - type: textarea
+    id: visual-language
+    attributes:
+      label: Visual language
+      description: Describe the token model, states, density, theme behavior, and examples.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] Standalone preview
+        - [ ] CSS and tokens
+        - [ ] Tailwind preset
+        - [ ] Codex skill bundle
+        - [ ] Screenshots
+        - [ ] Documentation
+        - [ ] `npm run validate` passes

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Before screenshot of an unstyled settings dashboard</title>
+  <desc id="desc">A simple dashboard with plain boxes, weak hierarchy, and minimal visual states.</desc>
+  <rect width="960" height="560" fill="#f6f7f9"/>
+  <rect x="48" y="48" width="864" height="464" rx="12" fill="#ffffff" stroke="#d8dde6"/>
+  <rect x="80" y="84" width="220" height="32" rx="4" fill="#dfe4ec"/>
+  <rect x="80" y="140" width="800" height="1" fill="#d8dde6"/>
+  <rect x="80" y="176" width="176" height="288" rx="6" fill="#f0f2f5" stroke="#d8dde6"/>
+  <rect x="288" y="176" width="592" height="288" rx="6" fill="#fafafa" stroke="#d8dde6"/>
+  <rect x="112" y="212" width="104" height="16" rx="3" fill="#b9c2cf"/>
+  <rect x="112" y="252" width="120" height="16" rx="3" fill="#d0d6df"/>
+  <rect x="112" y="292" width="96" height="16" rx="3" fill="#d0d6df"/>
+  <rect x="112" y="332" width="132" height="16" rx="3" fill="#d0d6df"/>
+  <rect x="328" y="216" width="210" height="20" rx="3" fill="#b9c2cf"/>
+  <rect x="328" y="264" width="500" height="44" rx="4" fill="#ffffff" stroke="#d8dde6"/>
+  <rect x="328" y="332" width="500" height="44" rx="4" fill="#ffffff" stroke="#d8dde6"/>
+  <rect x="328" y="412" width="124" height="36" rx="4" fill="#dfe4ec" stroke="#c6ceda"/>
+  <rect x="468" y="412" width="124" height="36" rx="4" fill="#ffffff" stroke="#c6ceda"/>
+</svg>

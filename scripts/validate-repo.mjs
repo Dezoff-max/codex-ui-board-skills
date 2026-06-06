@@ -1,9 +1,41 @@
+#!/usr/bin/env node
+
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const requestedChecks = new Set(process.argv.slice(2));
+const defaultRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
+const args = process.argv.slice(2);
+const requestedChecks = new Set();
+let root = defaultRoot;
+
+for (let index = 0; index < args.length; index += 1) {
+  const arg = args[index];
+
+  if (arg === "--root") {
+    root = resolve(args[index + 1] || ".");
+    index += 1;
+  } else if (arg.startsWith("--root=")) {
+    root = resolve(arg.slice("--root=".length));
+  } else if (arg === "--help" || arg === "-h") {
+    console.log(`codex-skill-lint
+
+Usage:
+  codex-skill-lint [--root <path>] [--structure] [--tokens] [--sync] [--gallery]
+
+Options:
+  --root <path>   Repository root to validate. Defaults to this package root.
+  --structure     Check required repository and skill files.
+  --tokens        Check package, skill, and design token metadata.
+  --sync          Check codex-skill/references files are synced.
+  --gallery       Check local links in index.html.
+`);
+    process.exit(0);
+  } else {
+    requestedChecks.add(arg);
+  }
+}
+
 const runAll = requestedChecks.size === 0;
 
 const checks = {
@@ -21,8 +53,20 @@ const requiredRootFiles = [
   "SECURITY.md",
   "CODE_OF_CONDUCT.md",
   "AGENTS.md",
+  "CHANGELOG.md",
+  "MAINTAINERS.md",
+  "action.yml",
+  "docs/codex-skill-lint.md",
+  "examples/install-skills.md",
+  "examples/frontend-pr-workflow/README.md",
+  ".github/CODEOWNERS",
+  ".github/PULL_REQUEST_TEMPLATE.md",
+  ".github/ISSUE_TEMPLATE/bug_report.yml",
+  ".github/ISSUE_TEMPLATE/feature_request.yml",
+  ".github/ISSUE_TEMPLATE/new_skill.yml",
   ".github/workflows/ci.yml",
   ".github/workflows/pages.yml",
+  ".github/workflows/codex-skill-lint.yml",
   "index.html",
   "site.css",
   "package.json",

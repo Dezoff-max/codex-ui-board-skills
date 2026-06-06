@@ -10,6 +10,18 @@ Great UI work is easier when the starting point is concrete. A reusable Codex sk
 
 This project exists to provide practical, inspectable UI starter kits for Codex-driven frontend work. Each skill is designed to be copied, installed, previewed, and adapted without requiring a build step.
 
+## Why This Matters for OSS Maintainers
+
+Maintainers spend review time on repeated frontend questions: whether a UI has enough states, whether tokens are synced, whether screenshots match the implementation, and whether a contribution follows the project's skill structure.
+
+Codex UI Board Skills turns those checks into reusable assets and automation:
+
+- speeds up UI pull request review with concrete visual references
+- standardizes Codex skill structure across contributors
+- reduces manual design-token and reference-file checks
+- gives maintainers a repeatable GitHub Action for validating skill packs
+- makes release notes, examples, screenshots, and gallery links easier to audit
+
 ## Who This Is For
 
 This project is useful for:
@@ -102,6 +114,8 @@ After the Pages workflow is enabled on `main`, the expected public URL is:
 https://dezoff-max.github.io/codex-ui-board-skills/
 ```
 
+Live gallery: <https://dezoff-max.github.io/codex-ui-board-skills/>
+
 ## Quality Checks
 
 Run the repository validation before opening a pull request or release:
@@ -117,6 +131,42 @@ The validation checks:
 - skill names matching package names
 - screenshot asset presence
 - synced `codex-skill/references/` files
+
+## Codex Skill Lint Action
+
+This repository also ships `codex-skill-lint`, a CLI entry point and reusable GitHub Action for checking Codex UI board skill packs.
+
+Use it in a workflow:
+
+```yaml
+name: Codex Skill Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.3
+      - uses: Dezoff-max/codex-ui-board-skills@v1.0.0
+        with:
+          root: "."
+```
+
+Run only selected checks:
+
+```yaml
+- uses: Dezoff-max/codex-ui-board-skills@v1.0.0
+  with:
+    root: "."
+    args: "--structure --tokens"
+```
+
+See [docs/codex-skill-lint.md](./docs/codex-skill-lint.md) for full usage.
 
 ## Codex Prompt Examples
 
@@ -145,6 +195,11 @@ Good prompts usually include:
 - any existing design constraints
 - whether the result should be a full page, component set, or focused restyle
 
+## Examples
+
+- [Install skills in Codex](./examples/install-skills.md)
+- [Frontend PR workflow with before/after screenshots](./examples/frontend-pr-workflow/README.md)
+
 ## Repository Structure
 
 ```text
@@ -155,6 +210,11 @@ Good prompts usually include:
 ├── SoftNeumorphicDualThemeBoard/
 ├── index.html
 ├── site.css
+├── action.yml
+├── CHANGELOG.md
+├── MAINTAINERS.md
+├── docs/
+├── examples/
 ├── ROADMAP.md
 ├── RELEASE_CHECKLIST.md
 ├── CONTRIBUTING.md

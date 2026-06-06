@@ -1,0 +1,24 @@
+name: Codex Skill Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Validate Codex skill pack
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.3
+
+      - name: Run local Codex Skill Lint action
+        uses: ./
+        with:
+          root: "."
