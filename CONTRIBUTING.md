@@ -82,10 +82,21 @@ Previews and examples should aim for:
 
 This project is still evolving, so accessibility improvements are welcome.
 
+## Validation Checks
+
+Before opening a pull request, run:
+
+```sh
+npm run validate
+```
+
+This checks folder structure, token JSON, skill/package naming, screenshot assets, and whether `codex-skill/references/` files are in sync with the top-level skill files.
+
 ## Pull Request Checklist
 
 Before opening a pull request, please check:
 
+- [ ] `npm run validate` passes.
 - [ ] The preview works locally.
 - [ ] Light and dark themes were tested when applicable.
 - [ ] Documentation was updated.

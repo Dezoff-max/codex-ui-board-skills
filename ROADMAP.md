@@ -7,7 +7,8 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 - [x] Add a professional root README.
 - [x] Add roadmap, contributing, security, code of conduct, and agent instructions.
 - [x] Add GitHub issue and pull request templates.
-- [ ] Add screenshots to the README in a compact visual gallery.
+- [x] Add screenshots to the README in a compact visual gallery.
+- [x] Add a static GitHub Pages gallery for all current skills.
 - [ ] Add more example prompts for each existing skill.
 - [ ] Add a short comparison guide for choosing between skills.
 - [ ] Improve each skill README with consistent sections and installation examples.
@@ -24,11 +25,11 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 
 ## Phase 3 - Developer Experience
 
-- [ ] Add token validation for `*.tokens.json` files.
-- [ ] Add folder-structure validation for new skills.
+- [x] Add token validation for `*.tokens.json` files.
+- [x] Add folder-structure validation for new skills.
 - [ ] Add automated screenshot generation for `preview.html`.
-- [ ] Add a script that checks whether preview CSS and skill reference CSS are in sync.
-- [ ] Add a checklist for publishing or updating a skill.
+- [x] Add a script that checks whether preview CSS and skill reference CSS are in sync.
+- [x] Add a checklist for publishing or updating a skill.
 - [ ] Add documentation for using the Tailwind presets in common frontend setups.
 
 ## Phase 4 - Accessibility and Quality
@@ -38,13 +39,13 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 - [ ] Document focus, hover, disabled, loading, and error states for each skill.
 - [ ] Add keyboard-navigation notes for interactive examples.
 - [ ] Add guidance for reduced-motion behavior where animations are used.
-- [ ] Add quality gates for screenshots, token names, and standalone preview behavior.
+- [x] Add quality gates for screenshots, token names, and synced reference files.
 
 ## Phase 5 - Community Contributions
 
-- [ ] Label good first issues.
-- [ ] Add example issues for new contributors.
-- [ ] Create a skill proposal template.
+- [x] Label good first issues.
+- [x] Add example issues for new contributors.
+- [x] Create a skill proposal template.
 - [ ] Document review expectations for new UI board skills.
-- [ ] Add a lightweight release process.
+- [x] Add a lightweight release process.
 - [ ] Encourage contributors to keep examples standalone, inspectable, and easy to adapt.

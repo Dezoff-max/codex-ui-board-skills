@@ -1,0 +1,15 @@
+{
+  "name": "codex-ui-board-skills",
+  "version": "1.0.0",
+  "description": "Validation and maintenance tooling for the Codex UI Board Skills repository.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-repo.mjs",
+    "check:structure": "node scripts/validate-repo.mjs --structure",
+    "check:tokens": "node scripts/validate-repo.mjs --tokens",
+    "check:sync": "node scripts/validate-repo.mjs --sync",
+    "check:gallery": "node scripts/validate-repo.mjs --gallery"
+  },
+  "license": "MIT"
+}
