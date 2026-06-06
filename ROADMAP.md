@@ -27,6 +27,8 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 
 - [x] Add token validation for `*.tokens.json` files.
 - [x] Add folder-structure validation for new skills.
+- [x] Add reusable `codex-skill-lint` profiles for UI board repos and portable skill packs.
+- [ ] Publish `@dezoff-max/codex-skill-lint` to npm after package verification.
 - [ ] Add automated screenshot generation for `preview.html`.
 - [x] Add a script that checks whether preview CSS and skill reference CSS are in sync.
 - [x] Add a checklist for publishing or updating a skill.

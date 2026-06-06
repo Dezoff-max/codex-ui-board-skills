@@ -1,18 +1,21 @@
 {
   "name": "@dezoff-max/codex-skill-lint",
   "version": "1.0.0",
-  "description": "CLI and GitHub Action for validating Codex UI board skill packs.",
+  "description": "CLI and GitHub Action for validating Codex skill packs and UI board repositories.",
   "private": false,
   "type": "module",
   "bin": {
-    "codex-skill-lint": "./scripts/validate-repo.mjs"
+    "codex-skill-lint": "scripts/validate-repo.mjs"
   },
   "scripts": {
     "validate": "node scripts/validate-repo.mjs",
+    "check:ui-board": "node scripts/validate-repo.mjs --profile ui-board-repo",
+    "check:skill-pack": "node scripts/validate-repo.mjs --profile skill-pack --structure --tokens",
     "check:structure": "node scripts/validate-repo.mjs --structure",
     "check:tokens": "node scripts/validate-repo.mjs --tokens",
     "check:sync": "node scripts/validate-repo.mjs --sync",
-    "check:gallery": "node scripts/validate-repo.mjs --gallery"
+    "check:gallery": "node scripts/validate-repo.mjs --gallery",
+    "check:npm": "npm publish --dry-run --access public"
   },
   "files": [
     "action.yml",
@@ -20,6 +23,7 @@
     "docs/codex-skill-lint.md",
     "examples/",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "publishConfig": {

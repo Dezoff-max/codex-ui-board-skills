@@ -1,5 +1,5 @@
 name: Codex Skill Lint
-description: Validate Codex UI board skill packs for structure, token metadata, synced references, and gallery links.
+description: Validate Codex skill packs with reusable profiles for UI board repos and generic skill bundles.
 author: Dezoff-max
 
 branding:
@@ -11,6 +11,10 @@ inputs:
     description: Repository root to validate.
     required: false
     default: "."
+  profile:
+    description: Validation profile to run. Use ui-board-repo for this repository layout or skill-pack for portable Codex skill bundles.
+    required: false
+    default: "ui-board-repo"
   args:
     description: Additional validator arguments such as --structure, --tokens, --sync, or --gallery.
     required: false
@@ -21,4 +25,4 @@ runs:
   steps:
     - name: Run codex-skill-lint
       shell: bash
-      run: node "$GITHUB_ACTION_PATH/scripts/validate-repo.mjs" --root "${{ inputs.root }}" ${{ inputs.args }}
+      run: node "$GITHUB_ACTION_PATH/scripts/validate-repo.mjs" --root "${{ inputs.root }}" --profile "${{ inputs.profile }}" ${{ inputs.args }}

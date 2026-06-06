@@ -124,6 +124,18 @@ Run the repository validation before opening a pull request or release:
 npm run validate
 ```
 
+Run the same checks explicitly through the strict UI board profile:
+
+```sh
+npm run check:ui-board
+```
+
+Run the portable profile that external Codex skill packs can reuse:
+
+```sh
+npm run check:skill-pack
+```
+
 The validation checks:
 
 - required repository and skill files
@@ -134,7 +146,12 @@ The validation checks:
 
 ## Codex Skill Lint Action
 
-This repository also ships `codex-skill-lint`, a CLI entry point and reusable GitHub Action for checking Codex UI board skill packs.
+This repository also ships `codex-skill-lint`, a CLI entry point and reusable GitHub Action for checking Codex skill packs.
+
+It includes two profiles:
+
+- `ui-board-repo` for this repository's full UI board layout
+- `skill-pack` for portable Codex skill repositories that may only contain `SKILL.md`, optional `package.json`, and optional `*.tokens.json` files
 
 Use it in a workflow:
 
@@ -155,6 +172,7 @@ jobs:
       - uses: Dezoff-max/codex-ui-board-skills@v1.0.0
         with:
           root: "."
+          profile: "ui-board-repo"
 ```
 
 Run only selected checks:
@@ -163,6 +181,17 @@ Run only selected checks:
 - uses: Dezoff-max/codex-ui-board-skills@v1.0.0
   with:
     root: "."
+    profile: "ui-board-repo"
+    args: "--structure --tokens"
+```
+
+Use the portable profile in another Codex skill repository:
+
+```yaml
+- uses: Dezoff-max/codex-ui-board-skills@v1.0.0
+  with:
+    root: "."
+    profile: "skill-pack"
     args: "--structure --tokens"
 ```
 

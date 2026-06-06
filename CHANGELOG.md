@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here.
 
+## Unreleased
+
+### Added
+
+- `codex-skill-lint` profiles for strict UI board repositories and portable Codex skill packs.
+- Manual npm publishing workflow with a safe dry-run default and npm package content verification.
+
+### Changed
+
+- CI now verifies the portable `skill-pack` profile and npm package contents.
+- GitHub Action usage examples now document the `profile` input.
+
 ## v1.0.0 - 2026-06-06
 
 ### Added
