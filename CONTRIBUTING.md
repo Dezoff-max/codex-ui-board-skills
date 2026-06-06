@@ -92,11 +92,24 @@ npm run validate
 
 This checks folder structure, token JSON, skill/package naming, screenshot assets, and whether `codex-skill/references/` files are in sync with the top-level skill files.
 
+Preview the screenshot capture plan before changing visual assets:
+
+```sh
+npm run capture:screenshots:dry-run
+```
+
+To regenerate screenshots locally, install Playwright as described in [docs/screenshot-capture.md](./docs/screenshot-capture.md), then run:
+
+```sh
+npm run capture:screenshots
+```
+
 ## Pull Request Checklist
 
 Before opening a pull request, please check:
 
 - [ ] `npm run validate` passes.
+- [ ] Screenshot capture artifact was reviewed when visual output changed.
 - [ ] The preview works locally.
 - [ ] Light and dark themes were tested when applicable.
 - [ ] Documentation was updated.

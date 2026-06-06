@@ -15,12 +15,16 @@
     "check:tokens": "node scripts/validate-repo.mjs --tokens",
     "check:sync": "node scripts/validate-repo.mjs --sync",
     "check:gallery": "node scripts/validate-repo.mjs --gallery",
-    "check:npm": "npm publish --dry-run --access public"
+    "check:npm": "npm publish --dry-run --access public",
+    "capture:screenshots": "node scripts/capture-screenshots.mjs",
+    "capture:screenshots:dry-run": "node scripts/capture-screenshots.mjs --dry-run"
   },
   "files": [
     "action.yml",
     "scripts/validate-repo.mjs",
+    "scripts/capture-screenshots.mjs",
     "docs/codex-skill-lint.md",
+    "docs/screenshot-capture.md",
     "examples/",
     "README.md",
     "CHANGELOG.md",
