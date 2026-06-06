@@ -7,9 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -19,30 +17,25 @@ jobs:
   deploy:
     name: Deploy static gallery
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - name: Prepare static site
         run: |
-          mkdir -p _site
-          cp index.html site.css README.md ROADMAP.md _site/
-          cp -R DualThemeSpecBoard LiquidGlassAuroraBoard NeoGlowControlBoard SoftNeumorphicDualThemeBoard _site/
+          mkdir -p ../_site
+          cp index.html site.css README.md ROADMAP.md ../_site/
+          cp -R DualThemeSpecBoard LiquidGlassAuroraBoard NeoGlowControlBoard SoftNeumorphicDualThemeBoard ../_site/
+          touch ../_site/.nojekyll
 
-      - name: Upload static artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish gh-pages branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan gh-pages-deploy
+          git rm -rf .
+          cp -R ../_site/. .
+          git add -A
+          git commit -m "Deploy Pages from ${GITHUB_SHA}"
+          git push --force origin HEAD:gh-pages
