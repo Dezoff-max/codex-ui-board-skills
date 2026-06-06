@@ -1,0 +1,21 @@
+- name: accessibility
+  color: "6f42c1"
+  description: Accessibility guidance, contrast, focus, and semantic HTML.
+- name: developer-experience
+  color: "0366d6"
+  description: Improvements to contributor or maintainer workflows.
+- name: examples
+  color: "0e8a16"
+  description: Example prompts, workflows, screenshots, or usage docs.
+- name: new-skill
+  color: "a2eeef"
+  description: Proposals or work for a new Codex UI board skill.
+- name: quality
+  color: "d93f0b"
+  description: Validation, correctness, and review quality.
+- name: screenshots
+  color: "fbca04"
+  description: Preview screenshots or visual regression coverage.
+- name: tooling
+  color: "5319e7"
+  description: CLI, GitHub Action, CI, release, or automation tooling.

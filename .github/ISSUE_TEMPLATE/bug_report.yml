@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a broken preview, validator failure, or incorrect skill file.
+title: "Bug: "
+labels:
+  - bug
+  - quality
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is broken or unexpected?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include commands, files, or preview URLs.
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add screenshots, logs, or relevant file paths.

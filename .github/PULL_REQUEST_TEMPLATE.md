@@ -1,26 +1,16 @@
-# Pull Request
-
 ## Summary
 
-Describe what this pull request changes.
+- 
 
-## Type of Change
+## Validation
 
-- [ ] Documentation
-- [ ] Existing skill improvement
-- [ ] New skill
-- [ ] Tooling or developer experience
-- [ ] Bug fix
+- [ ] `npm run validate` passes.
+- [ ] Preview files were opened locally when visual output changed.
+- [ ] Screenshots were updated when visual output changed.
+- [ ] `codex-skill/references/` files are synced with top-level source files.
+- [ ] Documentation or examples were updated when behavior changed.
 
-## Checklist
+## Maintainer Notes
 
-- [ ] Preview works locally.
-- [ ] Light and dark themes tested, if applicable.
-- [ ] Documentation updated.
-- [ ] Screenshots updated if needed.
-- [ ] Accessibility reviewed.
-- [ ] No unrelated files changed.
-
-## Notes for Reviewers
-
-Add any context, tradeoffs, or follow-up work.
+- Related issue:
+- Release impact:

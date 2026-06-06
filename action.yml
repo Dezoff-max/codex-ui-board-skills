@@ -1,0 +1,24 @@
+name: Codex Skill Lint
+description: Validate Codex UI board skill packs for structure, token metadata, synced references, and gallery links.
+author: Dezoff-max
+
+branding:
+  icon: check-circle
+  color: blue
+
+inputs:
+  root:
+    description: Repository root to validate.
+    required: false
+    default: "."
+  args:
+    description: Additional validator arguments such as --structure, --tokens, --sync, or --gallery.
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Run codex-skill-lint
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/scripts/validate-repo.mjs" --root "${{ inputs.root }}" ${{ inputs.args }}

@@ -1,15 +1,29 @@
 {
-  "name": "codex-ui-board-skills",
+  "name": "@dezoff-max/codex-skill-lint",
   "version": "1.0.0",
-  "description": "Validation and maintenance tooling for the Codex UI Board Skills repository.",
-  "private": true,
+  "description": "CLI and GitHub Action for validating Codex UI board skill packs.",
+  "private": false,
   "type": "module",
+  "bin": {
+    "codex-skill-lint": "./scripts/validate-repo.mjs"
+  },
   "scripts": {
     "validate": "node scripts/validate-repo.mjs",
     "check:structure": "node scripts/validate-repo.mjs --structure",
     "check:tokens": "node scripts/validate-repo.mjs --tokens",
     "check:sync": "node scripts/validate-repo.mjs --sync",
     "check:gallery": "node scripts/validate-repo.mjs --gallery"
+  },
+  "files": [
+    "action.yml",
+    "scripts/validate-repo.mjs",
+    "docs/codex-skill-lint.md",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT"
 }

@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest a validator, documentation, example, or workflow improvement.
+title: "Feature: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Maintainer problem
+      description: What review, triage, release, or implementation task would this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - tooling
+        - examples
+        - documentation
+        - screenshots
+        - accessibility
+        - new skill
+        - release workflow
+    validations:
+      required: true
