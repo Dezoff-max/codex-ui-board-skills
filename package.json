@@ -1,5 +1,5 @@
 {
-  "name": "@dezoff-max/codex-skill-lint",
+  "name": "codex-skill-lint",
   "version": "1.0.0",
   "description": "CLI and GitHub Action for validating Codex skill packs and UI board repositories.",
   "private": false,

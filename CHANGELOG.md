@@ -9,6 +9,7 @@ All notable changes to this project are documented here.
 - `codex-skill-lint` profiles for strict UI board repositories and portable Codex skill packs.
 - Manual npm publishing workflow with a safe dry-run default and npm package content verification.
 - Playwright screenshot capture script and workflow artifact generation for preview screenshots.
+- npm package name prepared as `codex-skill-lint` for direct `npx codex-skill-lint` usage.
 
 ### Changed
 
