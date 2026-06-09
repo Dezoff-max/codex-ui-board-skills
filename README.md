@@ -228,6 +228,7 @@ Good prompts usually include:
 
 - [Install skills in Codex](./examples/install-skills.md)
 - [Frontend PR workflow with before/after screenshots](./examples/frontend-pr-workflow/README.md)
+- [Detailed Codex prompt examples](./docs/EXAMPLE_PROMPTS.md)
 
 ## Repository Structure
 
@@ -298,6 +299,15 @@ module.exports = {
 ```
 
 Use the preset when you want the token system available inside an existing Tailwind project. Use the plain CSS when you want a standalone implementation reference.
+
+## Maintainer and Quality Docs
+
+This repository includes lightweight maintainer documentation for reviewing and expanding the skill collection:
+
+- [Skill comparison guide](./docs/SKILL_COMPARISON.md)
+- [Example Codex prompts](./docs/EXAMPLE_PROMPTS.md)
+- [Accessibility checklist](./docs/ACCESSIBILITY_CHECKLIST.md)
+- [Maintainer checklist](./docs/MAINTAINER_CHECKLIST.md)
 
 ## Roadmap Summary
 

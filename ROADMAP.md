@@ -9,8 +9,8 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 - [x] Add GitHub issue and pull request templates.
 - [x] Add screenshots to the README in a compact visual gallery.
 - [x] Add a static GitHub Pages gallery for all current skills.
-- [ ] Add more example prompts for each existing skill.
-- [ ] Add a short comparison guide for choosing between skills.
+- [x] Add more example prompts for each existing skill.
+- [x] Add a short comparison guide for choosing between skills.
 - [ ] Improve each skill README with consistent sections and installation examples.
 
 ## Phase 2 - Skill Expansion
@@ -36,7 +36,7 @@ This roadmap describes practical improvements for making Codex UI Board Skills m
 
 ## Phase 4 - Accessibility and Quality
 
-- [ ] Add an accessibility checklist for previews.
+- [x] Add an accessibility checklist for previews.
 - [ ] Review color contrast in light and dark themes.
 - [ ] Document focus, hover, disabled, loading, and error states for each skill.
 - [ ] Add keyboard-navigation notes for interactive examples.

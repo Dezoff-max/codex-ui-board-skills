@@ -104,6 +104,12 @@ To regenerate screenshots locally, install Playwright as described in [docs/scre
 npm run capture:screenshots
 ```
 
+For a more complete review flow, use [docs/ACCESSIBILITY_CHECKLIST.md](./docs/ACCESSIBILITY_CHECKLIST.md).
+
+## Maintainer Review
+
+Before proposing a larger change, review [docs/MAINTAINER_CHECKLIST.md](./docs/MAINTAINER_CHECKLIST.md). It covers folder structure, preview behavior, design tokens, screenshots, documentation, and release readiness.
+
 ## Pull Request Checklist
 
 Before opening a pull request, please check:
