@@ -52,6 +52,10 @@ Each skill includes light and dark screenshots in its `screenshots/` folder.
 | [Neo Glow Control Board](./NeoGlowControlBoard) | <img src="./NeoGlowControlBoard/screenshots/neo-glow-control-board-light.png" alt="Neo Glow Control Board light preview" width="360"> | <img src="./NeoGlowControlBoard/screenshots/neo-glow-control-board-dark.png" alt="Neo Glow Control Board dark preview" width="360"> |
 | [Soft Neumorphic Dual Theme Board](./SoftNeumorphicDualThemeBoard) | <img src="./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-light.png" alt="Soft Neumorphic Dual Theme Board light preview" width="360"> | <img src="./SoftNeumorphicDualThemeBoard/screenshots/soft-neumorphic-board-dark.png" alt="Soft Neumorphic Dual Theme Board dark preview" width="360"> |
 
+## Live Example
+
+- [SubPulse](https://subpulse.netlify.app/) is a public example of the Soft Neumorphic Dual Theme Board visual direction applied to a subscription calendar and spending analytics product site.
+
 ## Installation
 
 Clone the repository:
@@ -229,6 +233,7 @@ Good prompts usually include:
 - [Install skills in Codex](./examples/install-skills.md)
 - [Frontend PR workflow with before/after screenshots](./examples/frontend-pr-workflow/README.md)
 - [Detailed Codex prompt examples](./docs/EXAMPLE_PROMPTS.md)
+- [SubPulse live site using the Soft Neumorphic Dual Theme Board visual direction](https://subpulse.netlify.app/)
 
 ## Repository Structure
 
