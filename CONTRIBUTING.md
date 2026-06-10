@@ -71,16 +71,19 @@ Avoid one-off hardcoded values when a semantic token would make the design syste
 
 ## Accessibility Expectations
 
-Previews and examples should aim for:
+Previews and examples should aim for practical accessibility in static HTML/CSS examples. This project does not claim formal accessibility certification, but every skill preview should be easier to read, navigate, and adapt.
 
-- readable contrast in light and dark themes
-- visible focus states
-- clear disabled states
-- non-color-only status communication where possible
-- simple semantic HTML
-- reduced visual noise in dense interfaces
+Use this quick checklist when adding or updating a skill:
 
-This project is still evolving, so accessibility improvements are welcome.
+- [ ] Contrast: text, icons, dividers, and accent colors stay readable in light and dark themes.
+- [ ] Focus states: links, buttons, inputs, tabs, toggles, and other controls have visible `:focus-visible` treatment.
+- [ ] Disabled states: disabled controls look unavailable without becoming unreadable or easy to confuse with active controls.
+- [ ] Keyboard navigation: interactive controls follow a logical tab order and do not rely on hover-only interaction.
+- [ ] Reduced motion: animations, glows, parallax, and transitions stay subtle and can be reduced or removed in implementation examples.
+- [ ] State communication: errors, warnings, success states, and loading states are not communicated by color alone.
+- [ ] Semantics: previews use appropriate HTML elements such as buttons, links, labels, headings, lists, and tables where possible.
+
+For a fuller review pass, use [docs/ACCESSIBILITY_CHECKLIST.md](./docs/ACCESSIBILITY_CHECKLIST.md). This project is still evolving, so accessibility improvements are welcome.
 
 ## Validation Checks
 
@@ -104,7 +107,7 @@ To regenerate screenshots locally, install Playwright as described in [docs/scre
 npm run capture:screenshots
 ```
 
-For a more complete review flow, use [docs/ACCESSIBILITY_CHECKLIST.md](./docs/ACCESSIBILITY_CHECKLIST.md).
+Use the accessibility checklist above before opening a pull request, especially when changing previews, interactive states, screenshots, or theme tokens.
 
 ## Maintainer Review
 

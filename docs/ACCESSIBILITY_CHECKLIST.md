@@ -31,10 +31,11 @@ Use this checklist when adding or updating a Codex UI board skill. The goal is n
 - [ ] Badges and status pills are readable at small sizes.
 - [ ] Empty states and helper text are concise and understandable.
 
-## Motion and Visual Load
+## Reduced Motion and Visual Load
 
 - [ ] Animations are subtle and do not distract from task completion.
-- [ ] Any animated effects can be reduced or avoided in implementation examples.
+- [ ] Animated effects, glows, parallax, and transitions can be reduced or avoided in implementation examples.
+- [ ] Previews do not rely on motion to communicate required information.
 - [ ] Dense layouts preserve enough spacing for scanning.
 - [ ] Decorative effects do not reduce legibility.
 
@@ -45,4 +46,3 @@ Use this checklist when adding or updating a Codex UI board skill. The goal is n
 - [ ] The preview does not include unsafe example code.
 - [ ] The design remains usable at common desktop widths.
 - [ ] Mobile or narrow-width behavior is documented when relevant.
-
