@@ -1,0 +1,4 @@
+interface:
+  display_name: "Neo Glow Control Board"
+  short_description: "Blue-glow control-board UI style"
+  default_prompt: "Use $neo-glow-control-board to create or restyle this interface in a blue-glow control-board design system."

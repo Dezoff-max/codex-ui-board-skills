@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoftNeumorphicDualThemeBoard Preview</title>
+    <link rel="stylesheet" href="./SoftNeumorphicDualThemeBoard.css" />
+  </head>
+  <body class="snd-theme" data-theme="light">
+    <main class="snd-shell">
+      <section class="snd-toolbar">
+        <div>
+          <p class="snd-subtle">SoftNeumorphicDualThemeBoard UI Kit + Codex Skill</p>
+          <h1>Complete soft-neumorphic board for light and dark themes</h1>
+        </div>
+        <div class="snd-toggle" aria-label="Theme toggle">
+          <button type="button" data-theme-target="light" class="is-active">Light</button>
+          <button type="button" data-theme-target="dark">Dark</button>
+        </div>
+      </section>
+
+      <section class="snd-board">
+        <div>
+          <p class="snd-subtle">Tactile surfaces, large radii, and soft shadows</p>
+          <h2 class="snd-group-title">Foundations</h2>
+        </div>
+
+        <div class="snd-row">
+          <article class="snd-module">
+            <div>
+              <h3>Surfaces</h3>
+              <p>Base, raised, inset, and pressed surfaces in one material.</p>
+            </div>
+            <div class="snd-surfaces">
+              <div class="snd-surface-sample snd-surface-sample--base"><span>Base</span></div>
+              <div class="snd-surface-sample snd-surface-sample--raised"><span>Raised</span></div>
+              <div class="snd-surface-sample snd-surface-sample--inset"><span>Inset</span></div>
+              <div class="snd-surface-sample snd-surface-sample--pressed"><span>Pressed</span></div>
+            </div>
+          </article>
+
+          <article class="snd-module">
+            <div>
+              <h3>Elevation</h3>
+              <p>The same shapes across depth levels without harsh borders.</p>
+            </div>
+            <div class="snd-elevation">
+              <div class="snd-elevation-card"></div>
+              <div class="snd-elevation-card"></div>
+              <div class="snd-elevation-card"></div>
+              <div class="snd-elevation-card"></div>
+            </div>
+          </article>
+
+          <article class="snd-module">
+            <div>
+              <h3>Iconography</h3>
+              <p>Quiet system icons with accent only where state needs it.</p>
+            </div>
+            <div class="snd-icon-row">
+              <div class="snd-icon-box">✦</div>
+              <div class="snd-icon-box">⌂</div>
+              <div class="snd-icon-box">⚙</div>
+              <div class="snd-icon-box">☰</div>
+              <div class="snd-icon-box">🔔</div>
+              <div class="snd-icon-box">✉</div>
+              <div class="snd-icon-box">★</div>
+              <div class="snd-icon-box">⌘</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="snd-row">
+          <article class="snd-module snd-module--wide">
+            <div>
+              <h3>Borders, Radii, Spacing</h3>
+              <p>Shape is created with radius and shadow, not hard borders.</p>
+            </div>
+            <div class="snd-token-row">
+              <div class="snd-radius-pill" style="border-radius: 14px;">14</div>
+              <div class="snd-radius-pill" style="border-radius: 18px;">18</div>
+              <div class="snd-radius-pill" style="border-radius: 22px;">22</div>
+              <div class="snd-radius-pill" style="border-radius: 28px;">28</div>
+              <div class="snd-radius-pill is-pill">pill</div>
+            </div>
+            <div class="snd-spacing-row">
+              <div class="snd-spacing-pill">8</div>
+              <div class="snd-spacing-pill">12</div>
+              <div class="snd-spacing-pill">16</div>
+              <div class="snd-spacing-pill">20</div>
+              <div class="snd-spacing-pill">28</div>
+              <div class="snd-spacing-pill">32</div>
+            </div>
+            <div class="snd-search">Inset search / command surface</div>
+          </article>
+
+          <article class="snd-module">
+            <div>
+              <h3>Theme Notes</h3>
+              <p>One component set works in both themes through tokens.</p>
+            </div>
+            <div class="snd-card is-inset">
+              <div>bg</div>
+              <div>surface</div>
+              <div>text</div>
+              <div>accent</div>
+              <div>shadow.card</div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="snd-subtle">Core interactive states</p>
+          <h2 class="snd-group-title">Controls</h2>
+        </div>
+
+        <div class="snd-controls-grid">
+          <article class="snd-card">
+            <div>
+              <h3>Buttons</h3>
+              <p>Raised by default, softly pressed in active states.</p>
+            </div>
+            <div class="snd-action-row">
+              <button class="snd-btn snd-btn--primary">Primary</button>
+              <button class="snd-btn">Neutral</button>
+              <button class="snd-btn snd-btn--ghost">Ghost</button>
+              <button class="snd-btn" disabled>Disabled</button>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Text Fields</h3>
+              <p>Fields stay inset, while focus and error use accent treatment.</p>
+            </div>
+            <input class="snd-field" placeholder="Default input" />
+            <input class="snd-field is-focused" value="Focused state" />
+            <input class="snd-field is-error" value="Invalid entry" />
+            <div class="snd-helper">Helper text for search, forms, filters, and quiet system surfaces.</div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Selection & Slider</h3>
+              <p>Check, radio, switch, and slider from the same tactile system.</p>
+            </div>
+            <div class="snd-selection-row">
+              <div class="snd-check is-active">✓</div>
+              <div class="snd-check"></div>
+              <div class="snd-radio is-active"></div>
+              <div class="snd-radio"></div>
+              <div class="snd-switch is-active"></div>
+              <div class="snd-switch"></div>
+            </div>
+            <div class="snd-slider">
+              <div class="snd-slider-track">
+                <div class="snd-slider-fill"></div>
+                <div class="snd-slider-thumb"></div>
+              </div>
+              <div class="snd-helper">0% · 25% · 50% · 75% · 100%</div>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Dropdown & Date Picker</h3>
+              <p>Status, period, and date selection inside the same inset logic.</p>
+            </div>
+            <div class="snd-dropdown">
+              <span class="snd-subtle">Status</span>
+              <span>In review</span>
+              <span>▾</span>
+            </div>
+            <div class="snd-date-picker">
+              <div class="snd-date-picker-head">
+                <span>April 2026</span>
+                <span class="snd-subtle">◂ ▸</span>
+              </div>
+              <div class="snd-calendar-grid snd-calendar-grid--labels">
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+                <span>Su</span>
+              </div>
+              <div class="snd-calendar-grid">
+                <button class="snd-date-cell">12</button>
+                <button class="snd-date-cell">13</button>
+                <button class="snd-date-cell">14</button>
+                <button class="snd-date-cell is-active">15</button>
+                <button class="snd-date-cell">16</button>
+                <button class="snd-date-cell">17</button>
+                <button class="snd-date-cell">18</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="snd-subtle">Navigation, context, and flow</p>
+          <h2 class="snd-group-title">Navigation</h2>
+        </div>
+
+        <div class="snd-controls-grid">
+          <article class="snd-card">
+            <div>
+              <h3>Tabs</h3>
+              <p>Soft local navigation without extra visual noise.</p>
+            </div>
+            <div class="snd-tab-row">
+              <button class="snd-tab is-active">Overview</button>
+              <button class="snd-tab">Details</button>
+              <button class="snd-tab">Settings</button>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Breadcrumbs & Pagination</h3>
+              <p>Secondary navigation and quick page movement.</p>
+            </div>
+            <div class="snd-breadcrumbs">
+              <span class="snd-breadcrumb">Home</span>
+              <span class="snd-breadcrumb is-active">Projects</span>
+              <span class="snd-breadcrumb">Workspace</span>
+            </div>
+            <div class="snd-pagination">
+              <button class="snd-page">1</button>
+              <button class="snd-page is-active">2</button>
+              <button class="snd-page">3</button>
+              <button class="snd-page">4</button>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Process</h3>
+              <p>Stepper for setup, onboarding, and sequential actions.</p>
+            </div>
+            <div class="snd-process">
+              <div class="snd-process-step"></div>
+              <div class="snd-process-step is-active"></div>
+              <div class="snd-process-step"></div>
+              <div class="snd-process-step"></div>
+              <div class="snd-process-step"></div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="snd-subtle">Assembled application workspace</p>
+          <h2 class="snd-group-title">Workspace Layout</h2>
+        </div>
+
+        <div class="snd-row">
+          <article class="snd-module snd-module--wide">
+            <div>
+              <h3>Sidebar + Main Canvas</h3>
+              <p>A production-like screen, not only an atom gallery.</p>
+            </div>
+            <div class="snd-workspace">
+              <aside class="snd-sidebar">
+                <div class="snd-sidebar-brand">
+                  <strong>Studio</strong>
+                  <span class="snd-subtle">Ops board</span>
+                </div>
+                <div class="snd-sidebar-nav">
+                  <button class="snd-sidebar-item is-active">Overview</button>
+                  <button class="snd-sidebar-item">Analytics</button>
+                  <button class="snd-sidebar-item">Projects</button>
+                  <button class="snd-sidebar-item">Team</button>
+                  <button class="snd-sidebar-item">Files</button>
+                </div>
+              </aside>
+
+              <section class="snd-workspace-main">
+                <div class="snd-workspace-topbar">
+                  <div class="snd-search">Search reports, people, or issues</div>
+                  <button class="snd-btn snd-btn--primary">New Report</button>
+                </div>
+
+                <div class="snd-kpi-row">
+                  <div class="snd-kpi-card">
+                    <span class="snd-subtle">Open tasks</span>
+                    <strong>48</strong>
+                  </div>
+                  <div class="snd-kpi-card">
+                    <span class="snd-subtle">Velocity</span>
+                    <strong>+12%</strong>
+                  </div>
+                  <div class="snd-kpi-card">
+                    <span class="snd-subtle">Health score</span>
+                    <strong>92</strong>
+                  </div>
+                </div>
+
+                <div class="snd-chart-panel">
+                  <div>
+                    <div class="snd-item-title">Weekly flow</div>
+                    <div class="snd-item-meta">Output trend by team activity</div>
+                  </div>
+                  <div class="snd-bars">
+                    <span style="height: 38%;"></span>
+                    <span style="height: 52%;"></span>
+                    <span style="height: 48%;"></span>
+                    <span style="height: 70%;"></span>
+                    <span style="height: 64%;"></span>
+                    <span style="height: 82%;"></span>
+                    <span style="height: 74%;"></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+
+          <article class="snd-module">
+            <div>
+              <h3>Inspector</h3>
+              <p>Quiet right-side panel for details, statuses, and secondary actions.</p>
+            </div>
+            <div class="snd-inspector">
+              <div class="snd-card is-inset">
+                <div class="snd-item-title">Selected report</div>
+                <div class="snd-item-meta">Revenue summary · Updated 5m ago</div>
+              </div>
+              <div class="snd-badge-row">
+                <span class="snd-badge snd-badge--info">Draft</span>
+                <span class="snd-badge snd-badge--success">Synced</span>
+              </div>
+              <button class="snd-btn">Share</button>
+              <button class="snd-btn snd-btn--ghost">Archive</button>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="snd-subtle">Cards, tables, lists, statuses</p>
+          <h2 class="snd-group-title">Data Display</h2>
+        </div>
+
+        <div class="snd-data-grid">
+          <article class="snd-card">
+            <div>
+              <h3>Cards</h3>
+              <p>Raised cards for entities and summary blocks.</p>
+            </div>
+            <div class="snd-card is-inset">
+              <div class="snd-item-title">Project Alpha</div>
+              <div class="snd-item-meta">Progress 48%</div>
+              <button class="snd-mini-btn">View Details</button>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>List Items</h3>
+              <p>Dense but soft list rows for apps and dashboard UI.</p>
+            </div>
+            <div class="snd-list">
+              <div class="snd-list-item">
+                <div class="snd-avatar">A</div>
+                <div>
+                  <div class="snd-item-title">Item 1 - Description</div>
+                  <div class="snd-item-meta">Secondary operational text</div>
+                </div>
+                <span class="snd-badge snd-badge--info">Active</span>
+              </div>
+              <div class="snd-list-item">
+                <div class="snd-avatar">B</div>
+                <div>
+                  <div class="snd-item-title">Item 2 - Description</div>
+                  <div class="snd-item-meta">Quiet supporting metadata</div>
+                </div>
+                <span class="snd-badge snd-badge--success">Ready</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Badges, Table Head & Tooltip</h3>
+              <p>Statuses and compact elements in the same material.</p>
+            </div>
+            <div class="snd-badge-row">
+              <span class="snd-badge snd-badge--info">In review</span>
+              <span class="snd-badge snd-badge--success">Done</span>
+              <span class="snd-badge snd-badge--warning">Warning</span>
+              <span class="snd-badge snd-badge--danger">Risk</span>
+            </div>
+            <div class="snd-table-head">
+              <span>Name</span>
+              <span>Status</span>
+              <span>Date</span>
+              <button class="snd-mini-btn">Filter</button>
+            </div>
+            <div class="snd-tooltip">More info</div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Table Rows</h3>
+              <p>Table rows for operational lists, filters, and statuses.</p>
+            </div>
+            <div class="snd-table-list">
+              <div class="snd-table-row">
+                <span>Q2 Revenue</span>
+                <span class="snd-badge snd-badge--success">Ready</span>
+                <span class="snd-item-meta">Apr 15</span>
+              </div>
+              <div class="snd-table-row">
+                <span>Churn Watch</span>
+                <span class="snd-badge snd-badge--warning">Review</span>
+                <span class="snd-item-meta">Apr 16</span>
+              </div>
+              <div class="snd-table-row">
+                <span>Pipeline Sync</span>
+                <span class="snd-badge snd-badge--danger">Risk</span>
+                <span class="snd-item-meta">Apr 17</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Charts</h3>
+              <p>Mini chart widgets for dashboard and analytics panels.</p>
+            </div>
+            <div class="snd-chart-grid">
+              <div class="snd-spark-card">
+                <div class="snd-item-title">Conversion</div>
+                <div class="snd-line-chart">
+                  <svg viewBox="0 0 180 72" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M 4 54 C 26 48, 34 50, 54 36 S 92 18, 112 28 S 148 50, 176 22" />
+                  </svg>
+                </div>
+              </div>
+              <div class="snd-spark-card">
+                <div class="snd-item-title">Capacity</div>
+                <div class="snd-donut-chart">
+                  <div class="snd-donut-ring">78%</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div>
+          <p class="snd-subtle">Non-blocking and blocking feedback</p>
+          <h2 class="snd-group-title">Feedback</h2>
+        </div>
+
+        <div class="snd-feedback-grid">
+          <article class="snd-card">
+            <div>
+              <h3>Modal</h3>
+              <p>Action confirmation inside the same soft system.</p>
+            </div>
+            <div class="snd-modal">
+              <strong>Confirm Action</strong>
+              <p class="snd-subtle">Are you sure you want to continue?</p>
+              <div class="snd-action-row" style="margin-top: 12px;">
+                <button class="snd-btn snd-btn--ghost">Cancel</button>
+                <button class="snd-btn snd-btn--primary">Confirm</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Toast Stack & Progress</h3>
+              <p>Soft notifications and long-running operations.</p>
+            </div>
+            <div class="snd-toast-stack">
+              <div class="snd-toast">Success: file saved.</div>
+              <div class="snd-toast">Info: new update available.</div>
+              <div class="snd-toast">Warning: connection unstable.</div>
+            </div>
+            <div class="snd-progress">
+              <div class="snd-progress-ring">45%</div>
+              <div class="snd-progress-bar"><span></span></div>
+            </div>
+          </article>
+
+          <article class="snd-card">
+            <div>
+              <h3>Alert, Skeleton & Empty</h3>
+              <p>Warnings, loading, and empty states.</p>
+            </div>
+            <div class="snd-banner is-warning">
+              <span>Warning: review attention required.</span>
+              <button class="snd-mini-btn">Dismiss</button>
+            </div>
+            <div class="snd-skeleton">
+              <div class="snd-skeleton-line"></div>
+              <div class="snd-skeleton-line" style="width: 80%;"></div>
+              <div class="snd-skeleton-line" style="width: 64%;"></div>
+            </div>
+            <div class="snd-empty-state">
+              <div class="snd-folder"></div>
+              <div class="snd-subtle">No results found</div>
+              <button class="snd-mini-btn">Create New</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const body = document.body
+      const buttons = Array.from(document.querySelectorAll('[data-theme-target]'))
+      const params = new URLSearchParams(window.location.search)
+      const queryTheme = params.get('theme')
+      const allowedThemes = new Set(['light', 'dark'])
+
+      function applyTheme(nextTheme) {
+        const theme = allowedThemes.has(nextTheme) ? nextTheme : 'light'
+        body.setAttribute('data-theme', theme)
+
+        buttons.forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-theme-target') === theme)
+        })
+      }
+
+      applyTheme(queryTheme || body.getAttribute('data-theme'))
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const nextTheme = button.getAttribute('data-theme-target')
+          applyTheme(nextTheme)
+          const url = new URL(window.location.href)
+          url.searchParams.set('theme', nextTheme)
+          window.history.replaceState({}, '', url)
+        })
+      })
+    </script>
+  </body>
+</html>

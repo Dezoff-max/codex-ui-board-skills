@@ -1,0 +1,35 @@
+{
+  "name": "dual-theme-spec-board",
+  "version": "1.0.0",
+  "description": "Shareable dual-theme UI board with light and dark system templates, design tokens, CSS utilities, preview board, and bundled Codex skill.",
+  "private": false,
+  "main": "./tailwind.preset.cjs",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "default": "./tailwind.preset.cjs"
+    },
+    "./css": "./index.css",
+    "./tokens": "./DualThemeSpecBoard.tokens.json",
+    "./preview": "./preview.html",
+    "./tailwind-preset": "./tailwind.preset.cjs"
+  },
+  "files": [
+    "index.css",
+    "DualThemeSpecBoard.css",
+    "DualThemeSpecBoard.tokens.json",
+    "tailwind.preset.cjs",
+    "preview.html",
+    "README.md",
+    "codex-skill"
+  ],
+  "keywords": [
+    "ui-kit",
+    "design-system",
+    "light-theme",
+    "dark-theme",
+    "spec-board",
+    "codex-skill"
+  ],
+  "license": "MIT"
+}

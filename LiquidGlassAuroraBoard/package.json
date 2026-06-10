@@ -1,0 +1,39 @@
+{
+  "name": "liquid-glass-aurora-board",
+  "version": "1.0.0",
+  "description": "Dual-theme liquid glass UI board with aurora glow for Codex skill handoff.",
+  "private": false,
+  "main": "./tailwind.preset.cjs",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "default": "./tailwind.preset.cjs"
+    },
+    "./css": "./index.css",
+    "./tokens": "./LiquidGlassAuroraBoard.tokens.json",
+    "./preview": "./preview.html",
+    "./tailwind-preset": "./tailwind.preset.cjs"
+  },
+  "files": [
+    "index.css",
+    "LiquidGlassAuroraBoard.css",
+    "LiquidGlassAuroraBoard.tokens.json",
+    "tailwind.preset.cjs",
+    "preview.html",
+    "README.md",
+    "screenshots",
+    "codex-skill"
+  ],
+  "keywords": [
+    "liquid-glass",
+    "glassmorphism",
+    "aurora-ui",
+    "dual-theme",
+    "ui-kit",
+    "codex-skill"
+  ],
+  "scripts": {
+    "preview": "open preview.html"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "soft-neumorphic-dual-theme-board",
+  "version": "1.0.0",
+  "description": "Portable dual-theme soft neumorphic UI board with light and dark themes, design tokens, CSS utilities, preview, and bundled Codex skill.",
+  "private": false,
+  "main": "./tailwind.preset.cjs",
+  "style": "./index.css",
+  "exports": {
+    ".": {
+      "default": "./tailwind.preset.cjs"
+    },
+    "./css": "./index.css",
+    "./tokens": "./SoftNeumorphicDualThemeBoard.tokens.json",
+    "./preview": "./preview.html",
+    "./tailwind-preset": "./tailwind.preset.cjs"
+  },
+  "files": [
+    "index.css",
+    "SoftNeumorphicDualThemeBoard.css",
+    "SoftNeumorphicDualThemeBoard.tokens.json",
+    "tailwind.preset.cjs",
+    "preview.html",
+    "README.md",
+    "screenshots",
+    "codex-skill"
+  ],
+  "keywords": [
+    "soft-neumorphic",
+    "neumorphism",
+    "light-theme",
+    "dark-theme",
+    "ui-kit",
+    "codex-skill"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiquidGlassAuroraBoard</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main class="lg-theme theme-light" id="app">
+      <div class="aurora-stage">
+        <header class="topbar reveal">
+          <div>
+            <div class="eyebrow">Liquid Glass Design System</div>
+          </div>
+          <button class="theme-toggle" id="themeToggle" type="button">Switch theme</button>
+        </header>
+
+        <section class="hero-grid">
+          <article class="glass-panel glass-hero reveal delay-1">
+            <aside class="glass-sidebar">
+              <div class="glass-rail">
+                <button type="button">⌂</button>
+                <button type="button">✦</button>
+                <button type="button">+</button>
+                <button type="button">○</button>
+                <button type="button">▣</button>
+                <button class="active" type="button">4K</button>
+              </div>
+              <button class="glass-orb" type="button">+</button>
+            </aside>
+
+            <div class="hero-copy">
+              <div class="eyebrow">Liquid Glass UI Kit</div>
+              <h1>Soft glass, aurora glow, and translucent control layers</h1>
+              <p>
+                A frontend handoff board reimagined with large glass panels, luminous pills, frosted inputs, toggles, and cards that work equally well in light and dark themes.
+              </p>
+
+              <div class="action-stack">
+                <button class="glass-button primary" type="button">Primary Button</button>
+                <button class="glass-button secondary" type="button">Secondary Button</button>
+              </div>
+
+              <div class="glass-row" style="margin-bottom: 16px;">
+                <div class="glass-input" style="min-width: min(100%, 380px);">
+                  <span>⌕</span>
+                  <input value="Create new workspace" />
+                </div>
+                <button class="glass-orb" type="button">⌕</button>
+              </div>
+
+              <div class="glass-row" style="margin-bottom: 18px;">
+                <div class="glass-chip success">whitespace</div>
+                <div class="glass-tabs">
+                  <button class="glass-tab active" type="button">Toast</button>
+                  <button class="glass-tab" type="button">Tabs</button>
+                </div>
+              </div>
+
+              <div class="glass-chips">
+                <div class="glass-pill">Frosted Surface</div>
+                <div class="glass-pill">Depth 24</div>
+                <div class="glass-pill">Aurora Border</div>
+              </div>
+            </div>
+          </article>
+
+          <div class="search-panel">
+            <article class="glass-card glass-search-card reveal delay-2">
+              <div class="glass-search-top">
+                <div class="glass-mini">✦</div>
+                <div class="glass-orb">◌</div>
+              </div>
+
+              <div class="glass-search-box">
+                <div class="glass-input">
+                  <input value="Search projects..." />
+                </div>
+                <button class="glass-mini" type="button">+</button>
+              </div>
+
+              <div class="glass-list" style="margin-top: 18px;">
+                <div class="glass-list-item">
+                  <div class="glass-inline">
+                    <span class="glass-check">✓</span>
+                    <span>Search projects...</span>
+                  </div>
+                  <button class="glass-orb" type="button">›</button>
+                </div>
+                <div class="glass-inline">
+                  <div class="glass-chip">Nitestudio</div>
+                  <div class="glass-toggle"></div>
+                </div>
+              </div>
+              <div class="prism"></div>
+            </article>
+
+            <article class="glass-card feature-card reveal delay-3">
+              <div class="eyebrow">Feature Card</div>
+              <h2>Modern Glass UI Design</h2>
+              <p>Explore layered controls, translucent depth, token consistency and tactile hover states.</p>
+              <a class="feature-cta" href="#">↑ Upgrade plan</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="board-grid">
+          <div class="stack">
+            <article class="glass-panel reveal delay-2">
+              <div class="section-title">
+                <div>
+                  <div class="eyebrow">Foundations</div>
+                  <h3>Material, accents, and depth</h3>
+                </div>
+                <p>Glass surfaces, glow ramps, rounded controls</p>
+              </div>
+
+              <div class="subgrid">
+                <div class="subpanel">
+                  <h4>Surface Blend</h4>
+                  <p>High blur with near-white edge highlights.</p>
+                  <div class="meter-track" style="margin-top: 16px;">
+                    <div class="meter-fill"></div>
+                  </div>
+                </div>
+                <div class="subpanel">
+                  <h4>Accent Pair</h4>
+                  <div class="glass-row" style="margin-top: 14px;">
+                    <div class="token-swatch swatch-purple"></div>
+                    <div class="token-swatch swatch-cyan"></div>
+                    <div class="token-swatch swatch-glass"></div>
+                  </div>
+                </div>
+                <div class="subpanel">
+                  <h4>Elevation</h4>
+                  <div class="glass-nav" style="margin-top: 14px;">
+                    <button type="button">Panel</button>
+                    <button type="button">Button</button>
+                    <button type="button">Orb</button>
+                  </div>
+                </div>
+                <div class="subpanel">
+                  <h4>Blur Scale</h4>
+                  <div class="tiny" style="margin-top: 14px;">16px / 22px / 30px</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-panel reveal delay-3">
+              <div class="section-title">
+                <div>
+                  <div class="eyebrow">Controls</div>
+                  <h3>Input, tabs, toggles, status</h3>
+                </div>
+                <p>Everything is tied to one glass material</p>
+              </div>
+
+              <div class="glass-list">
+                <div class="glass-list-item">
+                  <div>
+                    <strong>Input Surface</strong>
+                    <div class="tiny">Rounded input with embedded search icon</div>
+                  </div>
+                  <div class="glass-input" style="width: 260px;">
+                    <span>⌕</span>
+                    <input value="Search projects..." />
+                  </div>
+                </div>
+                <div class="glass-list-item">
+                  <div>
+                    <strong>Segmented Tabs</strong>
+                    <div class="tiny">Primary and neutral tab states</div>
+                  </div>
+                  <div class="glass-tabs">
+                    <button class="glass-tab active" type="button">Boards</button>
+                    <button class="glass-tab" type="button">Tokens</button>
+                  </div>
+                </div>
+                <div class="glass-list-item">
+                  <div>
+                    <strong>Activity Toggle</strong>
+                    <div class="tiny">Luminous handle with soft track</div>
+                  </div>
+                  <div class="glass-toggle"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="stack">
+            <article class="glass-panel reveal delay-4">
+              <div class="section-title">
+                <div>
+                  <div class="eyebrow">Spec Board</div>
+                  <h3>Tokens and usage rules</h3>
+                </div>
+                <p>Fits as a handoff board for a UI kit skill</p>
+              </div>
+
+              <div class="glass-list">
+                <div class="list-row">
+                  <span>Radius family</span>
+                  <strong>20 / 24 / 32 / 999</strong>
+                </div>
+                <div class="list-row">
+                  <span>Accent logic</span>
+                  <strong>Purple + Cyan only</strong>
+                </div>
+                <div class="list-row">
+                  <span>Background aura</span>
+                  <strong>Blurred gradients</strong>
+                </div>
+                <div class="list-row">
+                  <span>Border treatment</span>
+                  <strong>Thin bright edge</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-panel reveal delay-4">
+              <div class="section-title">
+                <div>
+                  <div class="eyebrow">Metrics</div>
+                  <h3>How to keep the style coherent</h3>
+                </div>
+                <p>Glow belongs on interactions; the background stays calmer than content</p>
+              </div>
+
+              <div class="glass-metrics">
+                <div class="glass-stat">
+                  <div class="tiny">Blur</div>
+                  <strong>22px</strong>
+                </div>
+                <div class="glass-stat">
+                  <div class="tiny">Opacity</div>
+                  <strong>34%</strong>
+                </div>
+                <div class="glass-stat">
+                  <div class="tiny">Accent</div>
+                  <strong>2 hues</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const app = document.getElementById("app");
+      const themeToggle = document.getElementById("themeToggle");
+      const params = new URLSearchParams(window.location.search);
+      const queryTheme = params.get("theme");
+      const isCapture = params.get("capture") === "1";
+
+      const setTheme = (theme) => {
+        app.classList.remove("theme-light", "theme-dark");
+        app.classList.add(theme === "dark" ? "theme-dark" : "theme-light");
+        document.body.classList.remove("theme-light", "theme-dark");
+        document.body.classList.add(theme === "dark" ? "theme-dark" : "theme-light");
+      };
+
+      setTheme(queryTheme === "dark" ? "dark" : "light");
+
+      if (isCapture) {
+        app.classList.add("is-capture");
+      } else {
+        const interactiveNodes = app.querySelectorAll(
+          ".glass-panel, .glass-card, .glass-button, .glass-orb, .glass-mini, .glass-input, .glass-chip, .glass-pill, .glass-tabs, .glass-toggle, .glass-nav button, .glass-list-item, .subpanel, .glass-stat"
+        );
+
+        interactiveNodes.forEach((node) => {
+          node.classList.add("interactive-glass");
+
+          node.addEventListener("pointermove", (event) => {
+            const rect = node.getBoundingClientRect();
+            const mx = (event.clientX - rect.left) / rect.width;
+            const my = (event.clientY - rect.top) / rect.height;
+            const ry = `${(mx - 0.5) * 8}deg`;
+            const rx = `${(0.5 - my) * 8}deg`;
+
+            node.style.setProperty("--mx", mx.toFixed(3));
+            node.style.setProperty("--my", my.toFixed(3));
+            node.style.setProperty("--rx", rx);
+            node.style.setProperty("--ry", ry);
+          });
+
+          node.addEventListener("pointerleave", () => {
+            node.style.setProperty("--mx", "0.5");
+            node.style.setProperty("--my", "0.28");
+            node.style.setProperty("--rx", "0deg");
+            node.style.setProperty("--ry", "0deg");
+            node.style.setProperty("--lift", "0px");
+          });
+        });
+      }
+
+      themeToggle?.addEventListener("click", () => {
+        const nextTheme = app.classList.contains("theme-dark") ? "light" : "dark";
+        setTheme(nextTheme);
+      });
+    </script>
+  </body>
+</html>
